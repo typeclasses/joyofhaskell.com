@@ -2,5 +2,10 @@
 title: Contact
 ---
 
-I live in a small hut in the mountains of Kumano Kodō on Kii Hantō and would not
-like to be contacted.
+Please send questions and feedback to
+[hello@joyofhaskell.com](mailto:hello@joyofhaskell.com).
+
+Chat with us on Twitter:
+[\@joyofhaskell](https://twitter.com/joyofhaskell),
+[\@argumatronic](https://twitter.com/argumatronic),
+[\@chris__martin](https://twitter.com/chris__martin).
