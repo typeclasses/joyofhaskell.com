@@ -50,27 +50,27 @@
 
 // Start with assigning color names to specific hex values.
 $white:  #fffcf2 !default;
-$black:  #000 !default;
+$black:  #1F0322 !default;
 $red:    #d9534f !default;
-$orange: #f0ad4e !default;
-$yellow: #ffd500 !default;
-$green:  #5cb85c !default;
-$blue:   #0275d8 !default;
-$teal:   #5bc0de !default;
-$pink:   #ff5b77 !default;
-$purple: #613d7c !default;
+$orange: #FF9F1C !default;
+/*$yellow: #ffd500 !default;*/
+/*$green:  #5cb85c !default;*/
+$blue:   #48cfcb !default;
+$navy:   #1F2041 !default;
+$pink:   #C997C3 !default;
+$purple: #4D004D !default;
 
 // Create grayscale
-$gray-dark:                 #292b2c !default;
-$gray:                      #464a4c !default;
-$gray-light:                #636c72 !default;
-$gray-lighter:              #eceeef !default;
-$gray-lightest:             #f7f7f9 !default;
+$gray-dark:                 #4C4B48 !default;
+$gray:                      #7F7E79 !default;
+$gray-light:                #B2B0A9 !default;
+$gray-lighter:              #CCC9C1 !default;
+$gray-lightest:             #E5E2D9 !default;
 
 // Reassign color vars to semantic color scheme
-$brand-primary:             $blue !default;
-$brand-success:             $green !default;
-$brand-info:                $teal !default;
+$brand-primary:             $purple !default;
+$brand-success:             $pink !default;
+$brand-info:                $orange !default;
 $brand-warning:             $orange !default;
 $brand-danger:              $red !default;
 $brand-inverse:             $gray-dark !default;
@@ -84,7 +84,7 @@ $enable-rounded:            true !default;
 $enable-shadows:            false !default;
 $enable-gradients:          false !default;
 $enable-transitions:        true !default;
-$enable-hover-media-query:  false !default;
+$enable-hover-media-query:  true !default;
 $enable-grid-classes:       true !default;
 $enable-print-styles:       true !default;
 
@@ -139,15 +139,15 @@ $sizes: (
 // Settings for the `<body>` element.
 
 $body-bg:       $white !default;
-$body-color:    $gray-dark !default;
+$body-color:    $black !default;
 
 // Links
 //
 // Style anchor elements.
 
-$link-color:            $brand-primary !default;
+$link-color:            $brand-info !default;
 $link-decoration:       none !default;
-$link-hover-color:      darken($link-color, 15%) !default;
+$link-hover-color:      $navy !default;
 $link-hover-decoration: underline !default;
 
 
@@ -198,9 +198,10 @@ $grid-gutter-widths: (
 //
 // Font, line-height, and color for body text, headings, and more.
 
-$font-family-sans-serif: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
-$font-family-monospace:  Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
-$font-family-base:       $font-family-sans-serif !default;
+$font-family-sans-serif: 'Lato', Roboto, "Helvetica Neue", Arial, sans-serif !default;
+$font-family-monospace:  'Rubik', Consolas, "Courier New", monospace !default;
+$font-family-serif:      'Merriweather', Baskerville, serif !default;
+$font-family-base:       $font-family-serif !default;
 
 $font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
 $font-size-lg:   1.25rem !default;
@@ -318,7 +319,7 @@ $btn-box-shadow:                 inset 0 1px 0 rgba($white,.15), 0 1px 1px rgba(
 $btn-focus-box-shadow:           0 0 0 2px rgba($brand-primary, .25) !default;
 $btn-active-box-shadow:          inset 0 3px 5px rgba($black,.125) !default;
 
-$btn-primary-color:              $white !default;
+$btn-primary-color:              $purple !default;
 $btn-primary-bg:                 $brand-primary !default;
 $btn-primary-border:             $btn-primary-bg !default;
 
@@ -511,7 +512,7 @@ $form-icon-danger: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns
 $dropdown-min-width:             10rem !default;
 $dropdown-padding-y:             .5rem !default;
 $dropdown-margin-top:            .125rem !default;
-$dropdown-bg:                    $white !default;
+$dropdown-bg:                    $purple !default;
 $dropdown-border-color:          rgba($black,.15) !default;
 $dropdown-border-width:          $border-width !default;
 $dropdown-divider-bg:            $gray-lighter !default;
