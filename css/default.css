@@ -1,3 +1,17 @@
+@font-face {
+  font-family: 'Merriweather';
+  src: local('Merriweather'), url('/fonts/Merriweather-Regular.ttf') format('opentype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: local('Rubik'), url('/fonts/Rubik-Light.ttf') format('opentype');
+  font-style: normal;
+  font-weight: normal;
+}
+
 body {
     color: black;
     font-size: 16px;
@@ -12,7 +26,7 @@ div#header {
 }
 
 div#logo a {
-    color: black;
+    color: #4D004D;
     float: left;
     font-size: 18px;
     font-weight: bold;
@@ -24,7 +38,7 @@ div#header #navigation {
 }
 
 div#header #navigation a {
-    color: black;
+    color: #4D004D;
     font-size: 18px;
     font-weight: bold;
     margin-left: 12px;

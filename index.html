@@ -1,16 +1,153 @@
----
-title: Home
----
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="description" content="A manual for happy Haskelling."/>
+        <meta content="book" property="og:type"/>
+        <meta property="og:url" content="https://joyofhaskell.com/"/>
+        <meta property="og:title" content="The Joy of Haskell"/>
+        <meta property="og:description" content="A guide book to writing excellent Haskell."/>
+       <!--  will need the proper cover image at some point -->
+        <meta name="cover" property="og:image" content="https://joyofhaskell.com/images/heart-operator.png"/>
+        <meta name="author" content="Julie Moronuki, Christopher Martin"/>
+        <meta name="twitter:card" content="summary"/>
+        <meta name="twitter:url" content="https://joyofhaskell.com/"/>
+        <meta name="twitter:title" content="The Joy of Haskell"/>
+        <meta name="twitter:description" content="A guide book to happy Haskelling."/>
+        <meta name="twitter:image" content="https://joyofhaskell.com/images/heart-operator.png"/>
+        <meta name="twitter:site" content="joyofhaskell"/>
+        <meta name="book_title" content="The Joy of Haskell"/>
+        <meta name="mobileurl" content="https://joyofhaskell.com/"/>
+        <!-- in case we ever have a subtitle
+        <meta name="subtitle" content=""/> -->
+        <meta name="author" content="Christopher Martin, Julie Moronuki"/>
+        <meta name="publisher" content="Moronuki & Martin"/>
+        <meta name="graphic_large" content="https://joyofhaskell.com/images/heart-operator.png"/>
+        <meta name="graphic_medium" content="https://joyofhaskell.com/images/heart-operator.png"/>
+        <meta name="graphic" content="https://joyofhaskell.com/images/heart-operator.png"/>
+        <meta name="target" content="The Joy of Haskell"/>
+        <meta name="keywords" content="Haskell programming, programming, functional programming, functional languages, haskell, concurrent, languages, Christopher Martin, Julie Moronuki"/>
+        <meta name="date" content="February 25, 2017"/>
+        <meta name="Category" content="Books"/>
+        <!-- <meta name="SubCategory" content="Format~Format~Format~Publisher"/>
+        <meta name="bookeditionsorder" content="Early Access"/> -->
+        <meta name="book.tags" content="haskell"/>
+        <meta name="object.type" content="book"/>
+        <meta name="book.title" content="The Joy of Haskell"/>
+        <meta name="book.author" content="Julie Moronuki, Christopher Martin"/>
+        <meta name="book.link" content="https://joyofhaskell.com/"/>
+        <meta name="book.image" content="https://joyofhaskell.com/images/heart-operator.png"/>
+        <meta name="book.year" content="2017"/>
+        <meta name="language_name" content="English"/>
+        <meta name="native_language_name" content="English"/>
+        <link rel="canonical" href="https://joyofhaskell.com/"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Joy of Haskell - $title$</title>
+        <!-- suspect that css filepath will need to be changed -->
+        <link rel="stylesheet" href="/css/bootstrap.css" />
+        <link href="/css/bootstrap-theme.css" rel="stylesheet">
+        <link href="/css/syntax.css" rel="stylesheet">
+        <link rel="shortcut icon" href="/images/favicon.ico" />
+        <meta name="theme-color" content="#4d004d">
+        <link href="https://fonts.googleapis.com/css?family=Lato|Merriweather" rel="stylesheet">
+        <style>
+        body { 
+            font-family: 'Merriweather', serif;
+        }
+        body { margin-top: 80px; }
+        footer { margin-top: 80px; }
+        </style>
+        $partial("templates/google-analytics.html")$
+    </head>
+  <body>
+    $partial("templates/nav.html")$
 
-<h2>Welcome</h2>
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
 
-<img src="/images/haskell-logo.png" style="float: right; margin: 10px;" />
+    <div class="container marketing">
 
-<p>Welcome to The Joy of Haskell!</p>
+      <div class="row">
+        <div class="col-lg-4">
+          <img class="img-circle" data-src="/images/julie-auth.jpg" alt="Generic placeholder image">
+          <h2>Julie Moronuki</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing
+          elit. Nullam non est in neque luctus eleifend. Sed
+          tincidunt vestibulum facilisis. Aenean ut pulvinar massa.
+          </p>
+          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        </div>
+        <div class="col-lg-4">
+          <img class="img-circle" src="/images/heart-operator.png" alt="Generic placeholder image">
+          <h2>The Joy of Haskell</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing
+          elit. Nullam non est in neque luctus eleifend. Sed
+          tincidunt vestibulum facilisis. Aenean ut pulvinar massa.
+          </p>
+          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        </div>
+        <div class="col-lg-4">
+          <img class="img-circle" data-src="/images/chris-auth.jpg" alt="Generic placeholder image">
+          <h2>Christopher Martin</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing
+          elit. Nullam non est in neque luctus eleifend. Sed
+          tincidunt vestibulum facilisis. Aenean ut pulvinar massa.
+          </p>
+          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        </div>
+      </div>
 
-<h2>Posts</h2>
-$partial("templates/post-list.html")$
+      <hr class="featurette-divider">
 
-<br><br>
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Heading 1</h2>
+          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing
+          elit. Nullam non est in neque luctus eleifend. Sed
+          tincidunt vestibulum facilisis. Aenean ut pulvinar massa.
+          </p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+        </div>
+      </div>
 
-$partial("templates/mailchimp.html")$
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+        </div>
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Heading 2</h2>
+          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing
+          elit. Nullam non est in neque luctus eleifend. Sed
+          tincidunt vestibulum facilisis. Aenean ut pulvinar massa.
+          </p>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Header 3</h2>
+          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing
+          elit. Nullam non est in neque luctus eleifend. Sed
+          tincidunt vestibulum facilisis. Aenean ut pulvinar massa.
+          </p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+        </div>
+      </div>
+      $partial("templates/mailchimp.html")$
+      <hr class="featurette-divider">
+
+    $partial("templates/footer.html")$
+
+    </div>
+
+  </body>
+</html>
