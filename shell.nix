@@ -3,7 +3,7 @@
 pkgs.haskell.lib.buildStackProject {
   name = "joyofhaskell.com";
   inherit ghc;
-  buildInputs = with pkgs; [ sass ];
+  buildInputs = with pkgs; [ sass zlib ];
   LANG = "en_US.UTF-8";
   TMPDIR = "/tmp";
 }
