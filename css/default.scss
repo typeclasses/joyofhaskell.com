@@ -1,0 +1,76 @@
+@import 'partials/bootstrap.scss';
+
+@import 'partials/syntax.scss';
+
+@font-face {
+  font-family: 'Merriweather';
+  src: local('Merriweather'), url('/fonts/Merriweather-Regular.ttf') format('opentype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: local('Rubik'), url('/fonts/Rubik-Light.ttf') format('opentype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+body {
+    color: black;
+    font-size: 16px;
+    margin: 0px auto 0px auto;
+    width: 600px;
+}
+
+div#header {
+    border-bottom: 2px solid black;
+    margin-bottom: 30px;
+    padding: 12px 0px 12px 0px;
+}
+
+div#logo a {
+    color: #4D004D;
+    float: left;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+div#header #navigation {
+    text-align: right;
+}
+
+div#header #navigation a {
+    color: #4D004D;
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 12px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+div#footer {
+    border-top: solid 2px black;
+    color: #555;
+    font-size: 12px;
+    margin-top: 30px;
+    padding: 12px 0px 12px 0px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+div.info {
+    color: #555;
+    font-size: 14px;
+    font-style: italic;
+}
+
+@import 'partials/mailchimp.scss';

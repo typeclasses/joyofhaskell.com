@@ -54,12 +54,21 @@ static = do
   match "images/*" $ do
     route idRoute
     compile $ copyFileCompiler
-  match "css/*" $ do
-    route idRoute
-    compile compressCssCompiler
+  match "css/partials/*.scss" (compile getResourceBody)
+  cssDeps <- makePatternDependency "css/partials/*.scss"
+  rulesExtraDependencies [cssDeps] $
+    match "css/*.scss" $ do
+      route (setExtension "css")
+      compile scssCompiler
   -- match "js/*" $ do
   --   route idRoute
   --   compile $ copyFileCompiler
+
+scssCompiler :: Compiler (Item String)
+scssCompiler = do
+    input <- getResourceFilePath
+    output <- unixFilter "sassc" [input] ""
+    makeItem output
 
 pages :: Rules ()
 pages = do
