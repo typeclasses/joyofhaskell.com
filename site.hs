@@ -11,9 +11,12 @@ main = hakyll $ do
         route   idRoute
         compile copyFileCompiler
 
-    match "css/*" $ do
-        route   idRoute
-        compile compressCssCompiler
+    match "css/partials/*.scss" (compile getResourceBody)
+    cssDeps <- makePatternDependency "css/partials/*.scss"
+    rulesExtraDependencies [cssDeps] $
+        match "css/*.scss" $ do
+            route (setExtension "css")
+            compile scssCompiler
 
     match (fromList ["about.rst", "contact.markdown"]) $ do
         route   $ setExtension "html"
@@ -65,3 +68,9 @@ postCtx :: Context String
 postCtx =
     dateField "date" "%B %e, %Y" `mappend`
     defaultContext
+
+scssCompiler :: Compiler (Item String)
+scssCompiler = do
+    input <- getResourceFilePath
+    output <- unixFilter "sassc" [input] ""
+    makeItem output
