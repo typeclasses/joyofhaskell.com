@@ -45,10 +45,7 @@ input, button {
     left:0;
     top:0;
     background: $brand-primary;
-    color:$white;
-}
-
-.jumbotron.fluid {
+    color:$body-bg;
     border-bottom: 1px solid white;
     display: block;
     padding: 1em;
@@ -56,29 +53,17 @@ input, button {
     width: 100%;
 }
 
-/*.jumbotron.fluid a {
-    color: $white;
-    font-family:'BioRhyme';
-    font-style: italic;
-    font-size: 24px;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-.jumbotron.fluid-navbar {
-    padding: 1em;
-    line-height: 2em;
-}
-
-.jumbotron.fluid-navbar a {
-    font-family:'BioRhyme';
-    display: block;
-    color: $white;
-    font-size: 18px;
-    font-weight: bold;
-    font-style: italic;
-    text-transform: uppercase;
+/*.jumbotron.fluid {
+    
 }*/
+
+.jumbotron a {
+  a:link {
+  color: $brand-info;}
+  a:hover {
+  color: $body-bg;}
+}
+
 
 .container {
   max-width: 60em;
@@ -142,7 +127,6 @@ img {
     height: auto;
     max-height:300px;
     border-radius:50%;
-    /*background-image:url("http://placekitten.com/g/200/400");*/
     display:block;
     background-position-y:25%;
     background-position-y: center;
@@ -159,11 +143,10 @@ img {
 }
 
 
-nav
-
 body {
-    background: $white;
+    background: $body-bg;
     font-family: 'Merriweather', georgia, serif;
+    font-weight: 300;
     color:$black;
 }
 
@@ -173,7 +156,7 @@ div#header {
     padding: 12px 0px 12px 0px;
 }
 
-div#footer {
+.footer {
     border-top: solid 2px black;
     color: #555;
     font-size: 12px;
@@ -185,11 +168,19 @@ div#footer {
 h1 {
     font-family: 'BioRhyme';
     font-style: italic;
-    font-size: 26px;
+    font-size: 40px;
+    color: $brand-primary;
 }
 
 h2 {
     font-family: 'Lato';
+    font-size: 40px;
+    font-style: italic;
+}
+
+h3 {
+    font-family: 'Lato';
+    font-style: italic;
     font-size: 30px;
 }
 
