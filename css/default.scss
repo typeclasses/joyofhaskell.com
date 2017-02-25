@@ -45,7 +45,6 @@
     color:$white;
 }
 
-
 .jumbotron.fluid {
     border-bottom: 1px solid white;
     display: block;
@@ -54,22 +53,21 @@
     width: 100%;
 }
 
-.jumbotron.fluid a {
+/*.jumbotron.fluid a {
     color: $white;
     font-family:'BioRhyme';
     font-style: italic;
-    /*font-size: 40px;*/
     font-size: 24px;
     font-weight: bold;
     text-decoration: none;
 }
 
-.jumbotron.fluid-nav {
+.jumbotron.fluid-navbar {
     padding: 1em;
     line-height: 2em;
 }
 
-.jumbotron.fluid-nav a {
+.jumbotron.fluid-navbar a {
     font-family:'BioRhyme';
     display: block;
     color: $white;
@@ -77,7 +75,102 @@
     font-weight: bold;
     font-style: italic;
     text-transform: uppercase;
+}*/
+
+.container {
+  max-width: 60em;
+  @include make-container();
 }
+.row {
+  @include make-row();
+}
+.content-main {
+  @include make-col-ready();
+
+  @media (max-width: 32em) {
+    @include make-col(6);
+  }
+  @media (min-width: 32.1em) {
+    @include make-col(8);
+  }
+}
+.content-secondary {
+  @include make-col-ready();
+
+  @media (max-width: 32em) {
+    @include make-col(6);
+  }
+  @media (min-width: 32.1em) {
+    @include make-col(4);
+  }
+}
+
+img {
+ display: block;
+ height: auto;
+ max-width: 100%;;
+}
+
+.img-responsive {
+  display: inline-block;
+  height: auto;
+  max-width: 100%;
+}
+
+.img-rounded {
+  border-radius: 3px;
+}
+
+.img-thumbnail {
+  display: inline-block;
+  height: auto;
+  max-width: 100%;
+  padding: 4px;
+  line-height: 1.428571429;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  -webkit-transition: all 0.2s ease-in-out;
+          transition: all 0.2s ease-in-out;
+}
+
+/*.img-circle {
+*//* make it responsive */
+/*max-width: 100%;
+width:100%;
+height:auto;
+display:block;*/
+/* div height to be the same as width*/
+/*padding-top:100%;*/
+
+/* make it a circle */
+/*border-radius:50%;
+*/
+/* Centering on image`s center*/
+/*background-position-y: center;
+background-position-x: center;
+background-repeat: no-repeat;
+
+background-size: cover;
+}*/
+
+.img-circle {
+    width:100%;
+    height: auto;
+    max-height:300px;
+    border-radius:50%;
+    /*background-image:url("http://placekitten.com/g/200/400");*/
+    display:block;
+    background-position-y:25% 
+    background-position-y: center;
+    background-position-x: center;
+    background-repeat: no-repeat;
+
+    background-size: cover;
+}
+
+
+nav
 
 body {
     background: $white;
