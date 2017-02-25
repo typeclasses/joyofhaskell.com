@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: 'Merriweather';
-  src: local('Merriweather'), url('/fonts/Merriweather-Regular.ttf') format('opentype');
+  src: local('Merriweather'), url('/fonts/Merriweather-Light.ttf') format('opentype');
   font-style: normal;
   font-weight: normal;
 }
@@ -34,6 +34,29 @@ input, button {
     font-family: $font-family-sans-serif;
 }
 
+
+.btn-success {
+    font-family: $font-family-sans-serif;
+    margin-top: 2px;
+    margin-bottom: 1px;
+
+    box-shadow: 0 5px 2px rgba(0,0,0,0.3), 0 8px 25px rgba(0,0,0,0.5);
+
+    &:hover {
+        margin-top: 2px;
+        margin-bottom: 1px;
+
+        background: $blue;
+    }
+
+    &:active {
+        margin-top: 8px;
+        margin-bottom: 4px;
+
+        box-shadow: 0 1px 8px rgba(0,0,0,0.1), 0 2px 25px rgba(0,0,0,0.2);
+    }
+}
+
 .jumbotron.fluid {
     display: flex;
     flex-direction: column;
@@ -50,21 +73,16 @@ input, button {
     display: block;
     padding: 1em;
     text-align: center;
-    width: 100%;
 }
 
-/*.jumbotron.fluid {
-    
-}*/
-
-.jumbotron a {
-  a:link {
-  color: $brand-info;}
-  a:hover {
-  color: $body-bg;}
+.jumbotron {
+ a, a:link {
+   color: $brand-info;
+ }
+ a:hover {
+   color: $body-bg;
+ }
 }
-
-
 .container {
   max-width: 60em;
   @include make-container();

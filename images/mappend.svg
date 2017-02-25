@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   width="233.86398"
+   height="149.23894"
+   viewBox="0 0 219.24749 139.91151"
+   id="svg2"
+   version="1.1">
+  <defs
+     id="defs4" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="text4331-9"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:228.74171448px;line-height:125%;font-family:'Space Mono';-inkscape-font-specification:'Space Mono';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#c997c3;fill-opacity:1;stroke:#c997c3;stroke-width:1.39999998;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     transform="matrix(0.83462539,0,0,0.83462539,-7.3543848,-655.19569)">
+    <path
+       id="path4420-2"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:'Consolas Bold';text-align:center;text-anchor:middle;fill:#c997c3;fill-opacity:1;stroke:#c997c3;stroke-width:1.39999998;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 103.81333,939.16433 -75.27926,-63.44008 -7.789912,-14.45158 96.220962,-45.60783 4.27189,14.37808 -55.351032,47.01264 51.131692,29.97095 4.26669,16.04545 z" />
+  </g>
+  <g
+     id="text4335-5"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:228.74171448px;line-height:125%;font-family:Consolas;-inkscape-font-specification:Consolas;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#c997c3;fill-opacity:1;stroke:#c997c3;stroke-width:1.39999998;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     transform="matrix(0.83462539,0,0,0.83462539,-110.47939,-655.19569)">
+    <path
+       id="path4417-4"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:'Consolas Bold';text-align:center;text-anchor:middle;fill:#c997c3;fill-opacity:1;stroke:#c997c3;stroke-width:1.39999998;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 307.84791,813.95054 71.10118,47.34267 4.17808,15.98573 -75.27926,63.44008 -17.31199,-17.64706 -7.61739,-16.03011 62.90408,-29.53953 -55.28669,-45.90471 -7.64685,-15.94682 z" />
+  </g>
+  <path
+     d="m 74.323205,116.59793 -62.82998,-52.948627 62.82998,-52.85549 14.54224,14.72863 -46.23688,37.9404 46.23688,38.406457 z"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:medium;line-height:125%;font-family:Consolas;-inkscape-font-specification:'Consolas Bold';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#4d004d;fill-opacity:1;stroke:#c997c3;stroke-width:2.83772635;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     id="path4430-46" />
+  <path
+     d="m 141.45114,10.793813 62.82998,52.85549 -62.82998,52.948627 -14.44903,-14.72863 46.14368,-38.033627 -46.14368,-38.31323 z"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:medium;line-height:125%;font-family:Consolas;-inkscape-font-specification:'Consolas Bold';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#4d004d;fill-opacity:1;stroke:#c997c3;stroke-width:2.83772635;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     id="path4436-9" />
+</svg>
