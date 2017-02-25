@@ -23,38 +23,72 @@
   font-weight: normal;
 }
 
+@font-face {
+  font-family: 'BioRhyme';
+  src: local('BioRhyme'), url('/fonts/BioRhyme-Regular.ttf') format('opentype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+
+.jumbotron.fluid {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding:12px 20px 12px 0px;
+    height:100%;
+    width:270px;
+    position:fixed;
+    left:0;
+    top:0;
+    background: $brand-primary;
+    color:$white;
+}
+
+
+.jumbotron.fluid {
+    border-bottom: 1px solid white;
+    display: block;
+    padding: 1em;
+    text-align: center;
+    width: 100%;
+}
+
+.jumbotron.fluid a {
+    color: $white;
+    font-family:'BioRhyme';
+    font-style: italic;
+    /*font-size: 40px;*/
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.jumbotron.fluid-nav {
+    padding: 1em;
+    line-height: 2em;
+}
+
+.jumbotron.fluid-nav a {
+    font-family:'BioRhyme';
+    display: block;
+    color: $white;
+    font-size: 18px;
+    font-weight: bold;
+    font-style: italic;
+    text-transform: uppercase;
+}
+
 body {
-    color: black;
-    font-size: 16px;
-    margin: 0px auto 0px auto;
-    width: 600px;
+    background: $white;
+    font-family: 'Merriweather', georgia, serif;
+    color:$black;
 }
 
 div#header {
     border-bottom: 2px solid black;
     margin-bottom: 30px;
     padding: 12px 0px 12px 0px;
-}
-
-div#logo a {
-    color: #4D004D;
-    float: left;
-    font-size: 18px;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-div#header #navigation {
-    text-align: right;
-}
-
-div#header #navigation a {
-    color: #4D004D;
-    font-size: 18px;
-    font-weight: bold;
-    margin-left: 12px;
-    text-decoration: none;
-    text-transform: uppercase;
 }
 
 div#footer {
@@ -67,12 +101,16 @@ div#footer {
 }
 
 h1 {
-    font-size: 24px;
+    font-family: 'BioRhyme';
+    font-style: italic;
+    font-size: 26px;
 }
 
 h2 {
-    font-size: 20px;
+    font-family: 'Lato';
+    font-size: 30px;
 }
+
 
 div.info {
     color: #555;

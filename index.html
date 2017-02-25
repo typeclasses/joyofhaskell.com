@@ -48,20 +48,10 @@
         <link rel="shortcut icon" href="/images/favicon.ico" />
         <meta name="theme-color" content="#4d004d">
         <link href="https://fonts.googleapis.com/css?family=Lato|Merriweather" rel="stylesheet">
-        <style>
-        body { 
-            font-family: 'Merriweather', serif;
-        }
-        body { margin-top: 80px; }
-        footer { margin-top: 80px; }
-        </style>
         $partial("templates/google-analytics.html")$
+        $partial("templates/nav.html")$
     </head>
-  <body>
-    $partial("templates/nav.html")$
-
-    <!-- Marketing messaging and featurettes
-    ================================================== -->
+<body>
 
     <div class="container marketing">
 
@@ -69,35 +59,29 @@
         <div class="col-lg-4">
           <img class="img-circle" data-src="/images/julie-auth.jpg" alt="Generic placeholder image">
           <h2>Julie Moronuki</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing
-          elit. Nullam non est in neque luctus eleifend. Sed
-          tincidunt vestibulum facilisis. Aenean ut pulvinar massa.
+          <p>Julie likes whiskey and Deftones.
           </p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+          <p><button type="button" class="btn btn-primary">View details &raquo;</button></p>
         </div>
         <div class="col-lg-4">
           <img class="img-circle" src="/images/heart-operator.png" alt="Generic placeholder image">
           <h2>The Joy of Haskell</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing
-          elit. Nullam non est in neque luctus eleifend. Sed
-          tincidunt vestibulum facilisis. Aenean ut pulvinar massa.
+          <p>We both like infix operators and want you to like them, too.
           </p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+          <p><button type="button" class="btn btn-primary">View details &raquo;</button></p>
         </div>
         <div class="col-lg-4">
           <img class="img-circle" data-src="/images/chris-auth.jpg" alt="Generic placeholder image">
           <h2>Christopher Martin</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing
-          elit. Nullam non est in neque luctus eleifend. Sed
-          tincidunt vestibulum facilisis. Aenean ut pulvinar massa.
+          <p>Christopher likes sour beers.
           </p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+          <p><button type="button" class="btn btn-primary">View details &raquo;</button></p>
         </div>
       </div>
 
       <hr class="featurette-divider">
 
-      <div class="row featurette">
+      <!-- <div class="row featurette">
         <div class="col-md-7">
           <h2 class="featurette-heading">Heading 1</h2>
           <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing
@@ -137,7 +121,7 @@
         </div>
         <div class="col-md-5">
           <img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
-        </div>
+      -- > </div>
       </div>
       $partial("templates/mailchimp.html")$
       <hr class="featurette-divider">
@@ -146,5 +130,5 @@
 
     </div>
 
-  </body>
+</body>
 </html>
