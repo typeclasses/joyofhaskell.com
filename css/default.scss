@@ -30,7 +30,6 @@
   font-weight: normal;
 }
 
-
 .jumbotron.fluid {
     display: flex;
     flex-direction: column;
@@ -134,26 +133,6 @@ img {
           transition: all 0.2s ease-in-out;
 }
 
-/*.img-circle {
-*//* make it responsive */
-/*max-width: 100%;
-width:100%;
-height:auto;
-display:block;*/
-/* div height to be the same as width*/
-/*padding-top:100%;*/
-
-/* make it a circle */
-/*border-radius:50%;
-*/
-/* Centering on image`s center*/
-/*background-position-y: center;
-background-position-x: center;
-background-repeat: no-repeat;
-
-background-size: cover;
-}*/
-
 .img-circle {
     width:100%;
     height: auto;
@@ -161,12 +140,18 @@ background-size: cover;
     border-radius:50%;
     /*background-image:url("http://placekitten.com/g/200/400");*/
     display:block;
-    background-position-y:25% 
+    background-position-y:25%; 
     background-position-y: center;
     background-position-x: center;
     background-repeat: no-repeat;
 
-    background-size: cover;
+    /*background-size: cover;*/
+}
+
+.img-logo {
+    max-width: 100%;
+    display: inline-block;
+    vertical-align: middle; 
 }
 
 
