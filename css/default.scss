@@ -7,6 +7,10 @@ body {
     width: 600px;
 }
 
+input, button {
+    font-family: $font-family-sans-serif;
+}
+
 div#header {
     border-bottom: 2px solid black;
     margin-bottom: 30px;
