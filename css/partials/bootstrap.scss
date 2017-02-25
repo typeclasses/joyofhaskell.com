@@ -198,10 +198,9 @@ $grid-gutter-widths: (
 //
 // Font, line-height, and color for body text, headings, and more.
 
-$font-family-sans-serif: 'Lato', Roboto, "Helvetica Neue", Arial, sans-serif !default;
-$font-family-monospace:  'Rubik', Consolas, "Courier New", monospace !default;
-$font-family-serif:      'Merriweather', Baskerville, serif !default;
-$font-family-base:       $font-family-serif !default;
+$font-family-sans-serif: Lato, Roboto, "Helvetica Neue", Arial, sans-serif !default;
+$font-family-monospace:  Rubik, Consolas, "Courier New", monospace !default;
+$font-family-base:       Merriweather, Baskerville, serif !default;
 
 $font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
 $font-size-lg:   1.25rem !default;

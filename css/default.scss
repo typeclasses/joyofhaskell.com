@@ -30,6 +30,10 @@
   font-weight: normal;
 }
 
+input, button {
+    font-family: $font-family-sans-serif;
+}
+
 .jumbotron.fluid {
     display: flex;
     flex-direction: column;
@@ -140,7 +144,7 @@ img {
     border-radius:50%;
     /*background-image:url("http://placekitten.com/g/200/400");*/
     display:block;
-    background-position-y:25%; 
+    background-position-y:25%;
     background-position-y: center;
     background-position-x: center;
     background-repeat: no-repeat;
@@ -151,7 +155,7 @@ img {
 .img-logo {
     max-width: 100%;
     display: inline-block;
-    vertical-align: middle; 
+    vertical-align: middle;
 }
 
 
