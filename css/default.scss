@@ -29,32 +29,41 @@ input, button {
     }
 }
 
-.jumbotron.fluid {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding:12px 20px 12px 0px;
-    height:100%;
-    width:270px;
-    position:fixed;
-    left:0;
-    top:0;
+#global-header {
     background: $brand-primary;
-    color:$body-bg;
-    border-bottom: 1px solid white;
-    display: block;
-    padding: 1em;
-    text-align: center;
+
+    a {
+        &, &:link {
+            color: $brand-info;
+        }
+        &:hover {
+            color: $body-bg;
+        }
+    }
+
+    .logo {
+        @include float-left;
+
+        img {
+            height: 80px;
+            margin: 10px 0;
+        }
+    }
+
+    .nav {
+        @include float-right;
+        margin-top: 28px;
+        font-family: BioRhyme;
+        font-style: italic;
+        font-size: 28px;
+
+        a {
+            display: inline-block;
+            margin-left: 40px;
+        }
+    }
 }
 
-.jumbotron {
- a, a:link {
-   color: $brand-info;
- }
- a:hover {
-   color: $body-bg;
- }
-}
 .container {
   max-width: 60em;
   @include make-container();
@@ -137,7 +146,6 @@ img {
     vertical-align: middle;
 }
 
-
 body {
     background: $body-bg;
     font-family: 'Merriweather', georgia, serif;
@@ -189,21 +197,22 @@ h3 {
     font-size: 30px;
 }
 
+#authors-page {
 
-div.info {
-    color: $black;
-    font-size: 14px;
-    font-style: italic;
-}
+    .authors {
 
-div.logo {
-  padding-top: 75px;
-  padding-bottom: 75px; 
-  text-align: center; 
-}
+        .info {
+            color: $black;
+            font-size: 14px;
+            font-style: italic;
+        }
 
-div.nav {
-  text-align: right;
+        .logo {
+            padding-top: 75px;
+            padding-bottom: 75px;
+            text-align: center;
+        }
+    }
 }
 
 @import 'partials/mailchimp.scss';
