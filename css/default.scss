@@ -19,13 +19,19 @@ input, button {
     font-family: $font-family-sans-serif;
 }
 
+hr {
+    border-top: solid 1px $pink;
+}
+
 .container {
     max-width: 60em;
     @include make-container();
 }
+
 .row {
     @include make-row();
 }
+
 .content-main {
     @include make-col-ready();
 
@@ -36,6 +42,7 @@ input, button {
         @include make-col(8);
     }
 }
+
 .content-secondary {
     @include make-col-ready();
 

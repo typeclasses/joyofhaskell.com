@@ -1,69 +1,89 @@
 #authors-page {
+    margin-bottom: 50px;
+
+    .purple {
+        height: 250px;
+        margin-bottom: -230px;
+        background-color: $brand-primary;
+    }
 
     .authors {
 
-        .info {
-            color: $black;
-            font-size: 14px;
-            font-style: italic;
-        }
-
-        .logo {
+        .mappend {
             padding-top: 75px;
             padding-bottom: 75px;
             text-align: center;
+
+            svg {
+                height: 150px;
+                width: 150px;
+                border-radius: 3px;
+                max-width: 100%;
+                display: inline-block;
+                vertical-align: middle;
+
+                path {
+                    fill: $pink;
+                    stroke: $pink;
+                }
+            }
         }
 
-        img {
-            display: block;
-            height: auto;
-            max-width: 100%;
+        .author {
+            .img {
+                text-align: center;
+
+                img {
+                    width: 250px;
+                    border: 2px solid $brand-primary;
+                    border-radius: 50%;
+                    background-position-y: center;
+                    background-position-x: center;
+                    background-repeat: no-repeat;
+                }
+            }
+
+            .name {
+                margin: 1em 0;
+                text-align: center;
+            }
+
+            .bio p {
+                text-align: justify;
+            }
+
+            .links {
+                text-align: center;
+                margin-top: 2em;
+            }
         }
 
-        .img-responsive {
-            display: inline-block;
-            height: auto;
-            max-width: 100%;
+        hr {
+            display: none;
+        }
+    }
+}
+
+@media(max-width: 992px) {
+
+    #authors-page {
+        margin-bottom: 40px;
+
+        .purple {
+            display: none;
         }
 
-        .img-rounded {
-            height: 100px;
-            width: 100px;
-            border-radius: 3px;
-        }
+        .authors {
+            margin-top: 40px;
 
-        .img-thumbnail {
-            display: inline-block;
-            height: auto;
-            max-width: 100%;
-            padding: 4px;
-            line-height: 1.428571429;
-            background-color: $body-bg;
-            border: 1px solid $brand-primary;
-            border-radius: 4px;
-            -webkit-transition: all 0.2s ease-in-out;
-                    transition: all 0.2s ease-in-out;
-        }
+            .mappend {
+                display: none;
+            }
 
-        .img-circle {
-            width:100%;
-            height: auto;
-            max-height:300px;
-            border-radius:50%;
-            display:block;
-            background-position-y: center;
-            background-position-x: center;
-            background-repeat: no-repeat;
+            hr {
+                display: block;
+                margin: 40px 0;
+            }
         }
-
-        .img-logo {
-            height: 150px;
-            width: 150px;
-            border-radius: 3px;
-            max-width: 100%;
-            display: inline-block;
-            vertical-align: middle;
-        }
-
     }
 }
