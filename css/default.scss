@@ -120,7 +120,7 @@ div.header {
     padding: 12px 0px 12px 0px;
 }
 
-footer {
+#global-footer {
     border-top: solid 1px $pink;
     color: $brand-primary;
     font-family: $font-family-sans-serif;
@@ -128,15 +128,15 @@ footer {
     margin-top: 30px;
     padding: 12px 0px 12px 0px;
     text-align: center;
-}
 
-footer img {
-  width: 64px;
-  max-width: 100%;
-  display: inline-block;
-  vertical-align: middle;
-  padding-top: 30px;
-  padding-bottom: 30px;
+    img {
+        width: 64px;
+        max-width: 100%;
+        display: inline-block;
+        vertical-align: middle;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
 }
 
 h1 {
