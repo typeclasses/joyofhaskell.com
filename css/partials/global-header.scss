@@ -1,0 +1,49 @@
+#global-header {
+    background: $brand-primary;
+
+    a {
+        &, &:link {
+            color: $brand-info;
+        }
+        &:hover {
+            color: $body-bg;
+        }
+    }
+
+    .logo {
+        @include float-left;
+        padding: 10px 0;
+
+        img {
+            height: 80px;
+        }
+    }
+
+    .links {
+        @include float-right;
+        margin: 28px 0 0;
+        padding: 0;
+        font-family: BioRhyme;
+        font-style: italic;
+        font-size: 28px;
+
+        li {
+            display: inline-block;
+            padding: 0 0 0 40px;
+        }
+    }
+
+    @media (max-width: 450px) {
+        .container {
+            text-align: center;
+        }
+
+        .logo, .links {
+            @include float-none;
+        }
+
+        .links li {
+            padding: 0 20px;
+        }
+    }
+}

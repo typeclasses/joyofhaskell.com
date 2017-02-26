@@ -1,0 +1,21 @@
+#global-footer {
+    color: $brand-primary;
+    font-family: $font-family-sans-serif;
+    font-size: 12px;
+    margin-top: 30px;
+    padding: 12px 0px 12px 0px;
+    text-align: center;
+
+    &>.container:first-child {
+        border-top: solid 1px $pink;
+    }
+
+    img {
+        width: 64px;
+        max-width: 100%;
+        display: inline-block;
+        vertical-align: middle;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+}
