@@ -17,5 +17,10 @@
         vertical-align: middle;
         padding-top: 30px;
         padding-bottom: 30px;
+        opacity: 0.5;
+
+        &:hover {
+            opacity: 1;
+        }
     }
 }
