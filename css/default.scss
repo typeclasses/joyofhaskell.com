@@ -1,6 +1,7 @@
 @import 'partials/bootstrap.scss';
 @import 'partials/syntax.scss';
 @import 'partials/headings.scss';
+@import 'partials/mailchimp.scss';
 
 input, button {
     font-family: $font-family-sans-serif;
@@ -219,5 +220,3 @@ body {
 
     }
 }
-
-@import 'partials/mailchimp.scss';
