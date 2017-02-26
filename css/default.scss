@@ -133,8 +133,8 @@ img {
   max-width: 100%;
   padding: 4px;
   line-height: 1.428571429;
-  background-color: #ffffff;
-  border: 1px solid #dddddd;
+  background-color: $body-bg;
+  border: 1px solid $brand-primary;
   border-radius: 4px;
   -webkit-transition: all 0.2s ease-in-out;
           transition: all 0.2s ease-in-out;
@@ -174,13 +174,23 @@ div#header {
     padding: 12px 0px 12px 0px;
 }
 
-.footer {
-    border-top: solid 2px black;
-    color: #555;
+footer {
+    border-top: solid 1px $pink;
+    color: $brand-primary;
+    font-family: $font-family-sans-serif;
     font-size: 12px;
     margin-top: 30px;
     padding: 12px 0px 12px 0px;
     text-align: center;
+}
+
+footer img {
+  width: 64px;
+  max-width: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 h1 {
@@ -191,8 +201,8 @@ h1 {
 }
 
 h2 {
-    font-family: 'Lato';
-    font-size: 40px;
+    font-family: $font-family-sans-serif;
+    font-size: 30px;
     font-style: italic;
 }
 
