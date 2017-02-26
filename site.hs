@@ -15,6 +15,7 @@ import Hakyll
 import Text.Pandoc
 import Data.Monoid ((<>))
 import qualified Data.Map as M
+import System.FilePath (joinPath, splitPath, replaceExtension)
 
 --------------------------------------------------------------------
 -- Contexts
@@ -70,7 +71,9 @@ scssCompiler = do
 pages :: Rules ()
 pages = do
   match "pages/*" $ do
-    route $ setExtension "html"
+    route $ customRoute $ joinPath . tail . splitPath
+                        . replaceExtension "html"
+                        . toFilePath
     compile $ getResourceBody
       >>= loadAndApplyTemplate "templates/default.html"    postCtx
       >>= relativizeUrls
