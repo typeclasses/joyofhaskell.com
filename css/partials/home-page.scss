@@ -1,12 +1,38 @@
 #home-page {
 
     .intro {
-        padding: 90px 0 40px;
+        padding: 90px 0 0px;
         background: $brand-primary;
         color: $body-bg;
 
         h1 {
             color: $body-bg;
+        }
+
+        img {
+            width: 250px;
+            position: relative;
+            top: -50px;
+            right: -20px;
+        }
+    }
+}
+
+@media(max-width: 768px) {
+
+    #home-page {
+
+        .intro {
+
+            .img {
+                text-align: center;
+            }
+
+            img {
+                width: 120px;
+                position: static;
+                margin: 20px 0;
+            }
         }
     }
 }
