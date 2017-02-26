@@ -1,6 +1,12 @@
 #global-header {
     background: $brand-primary;
 
+    /* This prevents a sub-pixel gap that might otherwise appear on mobile
+     * devices between the header and an abutting element of the same
+     * background color.
+     */
+    margin-bottom: -1px;
+
     a {
         &, &:link {
             color: $brand-info;
