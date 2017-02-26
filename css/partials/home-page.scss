@@ -8,5 +8,16 @@
         h1 {
             color: $body-bg;
         }
+
+        .lead {
+            background: $brand-primary;
+            color: $body-bg;
+            font-family: $font-family-sans-serif;
+            font-style: italic;
+            font-size: 22px;
+            font-weight: 300;
+            margin-left: 6em;
+            margin-top: 12px;
+        }
     }
 }
