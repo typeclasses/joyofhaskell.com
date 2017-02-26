@@ -32,9 +32,9 @@ postCtx =
 --            then "<script type=\"text/javascript\" src=\"http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML\"></script>"
 --            else ""
 
-archiveCtx posts =
+blogCtx posts =
   listField "posts" postCtx (return posts)
-  <> constField "title" "Archives"
+  <> constField "title" "Blog"
   <> defaultContext
 
 indexCtx posts =
@@ -83,15 +83,15 @@ posts = do
       >>= loadAndApplyTemplate "templates/post.html"    postCtx
       >>= relativizeUrls
 
-archive :: Rules ()
-archive = do
-  create ["archive.html"] $ do
+blog :: Rules ()
+blog = do
+  create ["blog.html"] $ do
     route idRoute
     compile $ do
       posts <- recentFirst =<< loadAll "posts/*"
       makeItem ""
-        >>= loadAndApplyTemplate "templates/archive.html" (archiveCtx posts)
-        >>= loadAndApplyTemplate "templates/default.html" (archiveCtx posts)
+        >>= loadAndApplyTemplate "templates/blog.html" (blogCtx posts)
+        >>= loadAndApplyTemplate "templates/default.html" (blogCtx posts)
         >>= relativizeUrls
 
 index :: Rules ()
@@ -125,6 +125,6 @@ main = hakyllWith cfg $ do
   static
   pages
   posts
-  archive
+  blog
   index
   templates
