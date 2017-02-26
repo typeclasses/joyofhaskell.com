@@ -2,34 +2,6 @@
 
 @import 'partials/syntax.scss';
 
-@font-face {
-  font-family: 'Merriweather';
-  src: local('Merriweather'), url('/fonts/Merriweather-Light.ttf') format('opentype');
-  font-style: normal;
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: 'Rubik';
-  src: local('Rubik'), url('/fonts/Rubik-Light.ttf') format('opentype');
-  font-style: normal;
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: 'Lato';
-  src: local('Lato'), url('/fonts/Lato-Regular.ttf') format('opentype');
-  font-style: normal;
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: 'BioRhyme';
-  src: local('BioRhyme'), url('/fonts/BioRhyme-Regular.ttf') format('opentype');
-  font-style: normal;
-  font-weight: normal;
-}
-
 input, button {
     font-family: $font-family-sans-serif;
 }

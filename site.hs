@@ -48,9 +48,6 @@ indexCtx posts =
 
 static :: Rules ()
 static = do
-  match "fonts/*" $ do
-    route idRoute
-    compile $ copyFileCompiler
   match "images/*" $ do
     route idRoute
     compile $ copyFileCompiler
