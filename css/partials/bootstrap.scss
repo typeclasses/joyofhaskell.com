@@ -57,7 +57,7 @@ $yellow: #ffd500 !default;
 $green:  #5cb85c !default;
 $blue:   #0275d8 !default;
 $teal:   #5bc0de !default;
-$pink:   #ff5b77 !default;
+$pink:   #C997C3 !default;
 $purple: #613d7c !default;
 
 // Create grayscale
@@ -145,9 +145,9 @@ $body-color:    $gray-dark !default;
 //
 // Style anchor elements.
 
-$link-color:            $brand-primary !default;
+$link-color:            $pink !default;
 $link-decoration:       none !default;
-$link-hover-color:      darken($link-color, 15%) !default;
+$link-hover-color:      $blue !default;
 $link-hover-decoration: underline !default;
 
 
