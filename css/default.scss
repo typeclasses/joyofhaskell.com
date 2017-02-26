@@ -43,23 +43,38 @@ input, button {
 
     .logo {
         @include float-left;
+        padding: 10px 0;
 
         img {
             height: 80px;
-            margin: 10px 0;
         }
     }
 
-    .nav {
+    .links {
         @include float-right;
-        margin-top: 28px;
+        margin: 28px 0 0;
+        padding: 0;
         font-family: BioRhyme;
         font-style: italic;
         font-size: 28px;
 
-        a {
+        li {
             display: inline-block;
-            margin-left: 40px;
+            padding: 0 0 0 40px;
+        }
+    }
+
+    @media (max-width: 450px) {
+        .container {
+            text-align: center;
+        }
+
+        .logo, .links {
+            @include float-none;
+        }
+
+        .links li {
+            padding: 0 20px;
         }
     }
 }
@@ -90,60 +105,6 @@ input, button {
   @media (min-width: 32.1em) {
     @include make-col(4);
   }
-}
-
-img {
- display: block;
- height: auto;
- max-width: 100%;;
-}
-
-.img-responsive {
-  display: inline-block;
-  height: auto;
-  max-width: 100%;
-}
-
-.img-rounded {
-  height: 100px;
-  width: 100px;
-  border-radius: 3px;
-}
-
-.img-thumbnail {
-  display: inline-block;
-  height: auto;
-  max-width: 100%;
-  padding: 4px;
-  line-height: 1.428571429;
-  background-color: $body-bg;
-  border: 1px solid $brand-primary;
-  border-radius: 4px;
-  -webkit-transition: all 0.2s ease-in-out;
-          transition: all 0.2s ease-in-out;
-}
-
-.img-circle {
-    width:100%;
-    height: auto;
-    max-height:300px;
-    border-radius:50%;
-    display:block;
-    /*background-position-y:25%;*/
-    background-position-y: center;
-    background-position-x: center;
-    background-repeat: no-repeat;
-
-    /*background-size: cover;*/
-}
-
-.img-logo {
-    height: 150px;
-    width: 150px;
-    border-radius: 3px;
-    max-width: 100%;
-    display: inline-block;
-    vertical-align: middle;
 }
 
 body {
@@ -225,6 +186,59 @@ h3 {
             padding-bottom: 75px;
             text-align: center;
         }
+
+
+        img {
+            display: block;
+            height: auto;
+            max-width: 100%;
+        }
+
+        .img-responsive {
+            display: inline-block;
+            height: auto;
+            max-width: 100%;
+        }
+
+        .img-rounded {
+            height: 100px;
+            width: 100px;
+            border-radius: 3px;
+        }
+
+        .img-thumbnail {
+            display: inline-block;
+            height: auto;
+            max-width: 100%;
+            padding: 4px;
+            line-height: 1.428571429;
+            background-color: $body-bg;
+            border: 1px solid $brand-primary;
+            border-radius: 4px;
+            -webkit-transition: all 0.2s ease-in-out;
+                    transition: all 0.2s ease-in-out;
+        }
+
+        .img-circle {
+            width:100%;
+            height: auto;
+            max-height:300px;
+            border-radius:50%;
+            display:block;
+            background-position-y: center;
+            background-position-x: center;
+            background-repeat: no-repeat;
+        }
+
+        .img-logo {
+            height: 150px;
+            width: 150px;
+            border-radius: 3px;
+            max-width: 100%;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
     }
 }
 
