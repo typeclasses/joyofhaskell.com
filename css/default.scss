@@ -124,6 +124,8 @@ img {
 }
 
 .img-rounded {
+  height: 100px;
+  width: 100px;
   border-radius: 3px;
 }
 
@@ -146,7 +148,7 @@ img {
     max-height:300px;
     border-radius:50%;
     display:block;
-    background-position-y:25%;
+    /*background-position-y:25%;*/
     background-position-y: center;
     background-position-x: center;
     background-repeat: no-repeat;
@@ -155,6 +157,9 @@ img {
 }
 
 .img-logo {
+    height: 150px;
+    width: 150px;
+    border-radius: 3px;
     max-width: 100%;
     display: inline-block;
     vertical-align: middle;
@@ -168,7 +173,7 @@ body {
     color:$black;
 }
 
-div#header {
+div.header {
     border-bottom: 2px solid black;
     margin-bottom: 30px;
     padding: 12px 0px 12px 0px;
@@ -214,9 +219,15 @@ h3 {
 
 
 div.info {
-    color: #555;
+    color: $black;
     font-size: 14px;
     font-style: italic;
+}
+
+div.logo {
+  padding-top: 75px;
+  padding-bottom: 75px; 
+  text-align: center; 
 }
 
 @import 'partials/mailchimp.scss';
