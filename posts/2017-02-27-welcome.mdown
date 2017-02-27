@@ -4,29 +4,29 @@ abstract: Wherein we announce our exciting new project.
 ---
 # The Joy of Haskell  
 
-**We are Julie and Chris, and we love Haskell.**
+**We are <a href="/authors.html">two friends</a> who love Haskell.**
 
-We learned the concepts of Haskell, but still felt there was *_so_ much to learn*. 
+We understood the fundamental concepts of Haskell, but still felt there was *_so_ much to learn*. 
 
 We were ready to start on interesting projects but didn't know our way around the Haskell ecosystem.
 
 We realized the `Prelude` has some hidden dangers and wondered what, if anything, Haskellers do about that.
 
-We would spend late nights thinking to ourselves that we could use a glossary of the terminology we hear Haskellers toss around rather casually.
+We spent late nights wishing we had a glossary of the terminology we hear Haskellers toss around rather casually.
 
-We saw that the world was rich in monoids and functors and we wanted to meet them all.
-
-We even began thinking about lenses and streaming.
+We saw that the world was rich in monoids and functors and we wanted to befriend them all.
 
 We wanted examples. We wanted the language extensions we heard about to be discoverable. We wanted to know if a monad is actually *just a monoid in the category of endofunctors* and what that means.
 
-_If you recognize yourself in any of this, then we have good news:_
+If you recognize yourself in any of this, _then we have good news:_
 
 **_Friend, we are writing this book for you._**
 
-#### Pull Up a Chair and Let's Get Acquainted  
+### Allow us to introduce our new project
 
-# Why Joy?  
+We've spent a few months figuring out what book we, as Haskell users, want to see. **_The Joy of Haskell_** is a work in progress, the culmination of those discussions, the kind of book we want to help us write better, happier Haskell.
+
+#### Why Joy?  
 
 We chose the title because *joy* describes our feeling when we discover new things in Haskell, when we write Haskell, when we talk to our friends about Haskell. 
 
@@ -36,7 +36,7 @@ We aim to make not just a book, but a work of art. A free verse celebration of m
 
 ### Follow Your Own Path
 
-Your learning path as you go deeper into Haskell is unique to you and what you want to do. Maybe it's the category theory that grabs your interest; maybe you want examples for some of Haskell's libraries, instead of a lengthy tutorial, to facilitate writing top-notch code. *The Joy of Haskell* will be formatted in such a way that you can turn from one page to the next to follow one path, or jump to any of the cross-referenced, related material. 
+Your learning path as you go deeper into Haskell is unique to you and what you want to do. Maybe it's the category theory that grabs your interest; maybe you want examples for some of Haskell's libraries to facilitate writing top-notch code. *The Joy of Haskell* will be formatted in such a way that you can turn from one page to the next to follow one path, or jump to any of the cross-referenced, related material. 
 
 ### You Have Learned You Some Haskell
 

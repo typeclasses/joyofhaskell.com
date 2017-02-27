@@ -28,7 +28,7 @@
 
     h2 {
         font-family: 'Lato';
-        font-style: normal;
+        font-style: italic;
         font-size: 3em;
         color: $brand-primary; 
         text-align: center;
@@ -38,7 +38,7 @@
     h3 {
         font-family: 'Lato';
         font-style: italic;
-        font-size: 3em;
+        font-size: 2em;
         color: $brand-primary;
         text-align: center;
         line-height: 2em;
@@ -46,9 +46,15 @@
     h4 {
         font-family: 'BioRhyme';
         font-style: italic;
-        font-size: 2em;
+        font-size: 3em;
         color: $blue;
         text-align: center;
         line-height: 2em;
+    }
+    strong {
+        font-family: 'Lato';
+        font-size: 1.25em;
+        font-style: bold;
+        color: $brand-primary;
     }
 }
