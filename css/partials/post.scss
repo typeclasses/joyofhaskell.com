@@ -1,7 +1,54 @@
 #post {
     padding: 4em 0 2em;
+    font-family: 'Merriweather';
+    font-weight: light;
+    font-size: 15px;
+    color: $black;
+
+    code { 
+        font-family: 'SpaceMono', monospace;
+        font-size: 15px;
+        font-weight: 600;
+        background: #FFF6EA;
+        color: $brand-primary; 
+    }
 
     .info {
         margin: 0 0 1em;
+    }
+
+    h1 {
+        font-family: 'BioRhyme';
+        font-style: normal;
+        font-size: 4em;
+        color: $brand-primary;
+        text-align: center;
+        line-height: 2em;
+    }
+
+    h2 {
+        font-family: 'Lato';
+        font-style: normal;
+        font-size: 3em;
+        color: $black; 
+        text-align: center;
+        line-height: 2em;
+    }
+
+    h3 {
+        font-family: 'Lato';
+        font-style: italic;
+        font-size: 3em;
+        color: $black;
+        text-align: center;
+        line-height: 2em;
+    }
+    h4 {
+        font-family: 'BioRhyme';
+        font-style: italic;
+        font-size: 2em;
+        color: $blue;
+        text-align: center;
+        line-height: 2em;
     }
 }
