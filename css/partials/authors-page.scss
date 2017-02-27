@@ -46,10 +46,14 @@
             .name {
                 margin: 1em 0;
                 text-align: center;
+                color: $brand-primary;
+                font-style: bold;
             }
 
             .bio p {
                 text-align: justify;
+                font-family: 'Merriweather';
+                font-weight: 400;
             }
 
             .links {
