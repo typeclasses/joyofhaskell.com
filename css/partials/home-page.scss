@@ -29,11 +29,28 @@
     }
 }
 
+@media(max-width: 992px) {
+
+    #home-page {
+
+        .intro {
+
+            .lead {
+                margin-left: 2em;
+            }
+        }
+    }
+}
+
 @media(max-width: 768px) {
 
     #home-page {
 
         .intro {
+
+            .lead {
+                margin-left: 0;
+            }
 
             .img {
                 text-align: center;
