@@ -1,5 +1,6 @@
 ---
 title: The Joy of Haskell
+abstract: Wherein we announce our exciting new project.
 ---
 # The Joy of Haskell
 
