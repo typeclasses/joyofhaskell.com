@@ -2,16 +2,42 @@
     padding: 4em 0 2em;
     font-family: 'Merriweather';
     font-weight: 400;
-    font-size: 15px;
+    font-size: 17px;
     color: $black;
-    text-align: center;
+    text-align: left;
 
     h1 {
         font-family: 'BioRhyme';
-        font-size: 3em;
+        font-size: 2em;
         color: $brand-primary;
         line-height: 2em;
         text-align: center;
+        font-style: normal;
 
+    }
+
+    .abstract {
+        margin-left: 2em;
+        font-weight: 300;
+        font-style: italic;
+    }
+
+    .info {
+        margin-left: 2em;
+        margin-right: 2em;
+        font-family: 'Lato';
+        font-size: 1em;
+        color: $black;
+    }
+
+    img.smol {
+        height: 2.5em;
+        width: 3em;
+        border-radius: 1em;
+        max-width: 100%;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 3px;
+        margin-left: 3px;
     }
 }
