@@ -1,6 +1,18 @@
 <div class="container">
     <br><br><br>
-    Here you can find all my previous posts:
-    $partial("templates/post-list.html")$
+    <ul>
+        $for(posts)$
+            <li>
+                <p>
+                    <a href="$url$">$title$</a> - $date$
+                </p>
+                $if(abstract)$
+                <p>
+                    $abstract$
+                </p>
+                $endif$
+            </li>
+        $endfor$
+    </ul>
     <br><br><br>
 </div>
