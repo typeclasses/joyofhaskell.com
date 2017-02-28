@@ -13,5 +13,5 @@ lambdaize = fmap (\case 'l' -> 'λ'
 
 ```haskell
 λ> putStrLn (lambdaize "Delightful!")
-Deλightfuλ!
+-- Deλightfuλ!
 ```

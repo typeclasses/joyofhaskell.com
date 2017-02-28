@@ -46,6 +46,14 @@
             font-size: 1.25em;
             color: $brand-primary;
         }
+
+        .row {
+            margin-bottom: 3em;
+        }
+    }
+
+    pre.sourceCode {
+        margin: 0.5em 0;
     }
 }
 

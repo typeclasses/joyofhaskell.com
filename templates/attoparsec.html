@@ -1,0 +1,15 @@
+<div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">import </span><span class="dt">Data.Attoparsec.Text</span>
+
+λ<span class="fu">&gt;</span> parseOnly (char <span class="ch">&#39;a&#39;</span>) <span class="st">&quot;a&quot;</span>
+<span class="co">-- Right &#39;a&#39;</span>
+
+λ<span class="fu">&gt;</span> parseOnly (char <span class="ch">&#39;a&#39;</span>) <span class="st">&quot;&quot;</span>
+<span class="co">-- Left &quot;&#39;a&#39;: not enough input&quot;</span>
+
+λ<span class="fu">&gt;</span> parseOnly (char <span class="ch">&#39;a&#39;</span>) <span class="st">&quot;b&quot;</span>
+<span class="co">-- Left &quot;&#39;a&#39;: Failed reading: satisfy&quot;</span>
+
+λ<span class="fu">&gt;</span> parseOnly
+     (many (char <span class="ch">&#39;a&#39;</span>) <span class="fu">&lt;*</span> char <span class="ch">&#39;b&#39;</span>)
+     <span class="st">&quot;aaab&quot;</span>
+<span class="co">-- Right &quot;aaa&quot;</span></code></pre></div>

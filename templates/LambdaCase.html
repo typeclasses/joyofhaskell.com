@@ -1,0 +1,9 @@
+<div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell">lambdaize <span class="fu">=</span> fmap f
+  <span class="kw">where</span>
+    f <span class="ch">&#39;l&#39;</span> <span class="fu">=</span> <span class="ch">&#39;λ&#39;</span>
+    f x   <span class="fu">=</span> x</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">{-# LANGUAGE LambdaCase #-}</span>
+lambdaize <span class="fu">=</span> fmap (\<span class="kw">case</span> <span class="ch">&#39;l&#39;</span> <span class="ot">-&gt;</span> <span class="ch">&#39;λ&#39;</span>
+                        x   <span class="ot">-&gt;</span> x)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell">λ<span class="fu">&gt;</span> putStrLn (lambdaize <span class="st">&quot;Delightful!&quot;</span>)
+<span class="co">-- Deλightfuλ!</span></code></pre></div>
