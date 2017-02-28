@@ -12,20 +12,25 @@
         line-height: 2em;
         text-align: center;
         font-style: normal;
+        margin-bottom: 1em;
+    }
+
+    .date {
+        white-space: nowrap;
     }
 
     .abstract {
-        margin-left: 2em;
+        margin: 0.5em 0 0 0.5em;
         font-weight: 300;
         font-style: italic;
     }
 
     .info {
-        margin-left: 2em;
-        margin-right: 2em;
+        margin: 0 2em 2em;
         font-family: $font-family-sans-serif;
         font-size: 1em;
         color: $black;
+        opacity: 0.6;
     }
 
     img.smol {
@@ -37,5 +42,28 @@
         vertical-align: middle;
         margin-right: 3px;
         margin-left: 3px;
+    }
+}
+
+@media (max-width: 992px) {
+
+    #archive {
+
+        h1 {
+            font-size: 28px;
+        }
+    }
+}
+
+@media (max-width: 800px) {
+
+    #archive {
+
+        h1 {
+
+            span {
+                display: none;
+            }
+        }
     }
 }
