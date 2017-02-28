@@ -40,6 +40,6 @@ Your learning path as you go deeper into Haskell is unique to you and what you w
 
 ### You Have Learned You Some Haskell
 
-The Joy of Haskell probably shouldn't be the first Haskell book you work through. This book will rely on you already understanding the fundamental concepts. This book will help you find your way from there. 
+*The Joy of Haskell* probably shouldn't be the first Haskell book you work through. This book will assume you already understand the fundamental concepts. This book will help you find your way from there. 
 
 If you are looking for a book to learn Haskell from the ground up, we recommend Julie's previous book, [Haskell Programming from First Principles](http://haskellbook.com/), but there are [other options](https://haskell-lang.org/documentation) available.
