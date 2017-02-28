@@ -40,6 +40,8 @@ blogCtx posts =
 
 indexCtx =
   constField "title" "Home"
+  <> constField "twitter-title" "The Joy of Haskell"
+  <> constField "twitter-url" "/"
   <> defaultContext
 
 --------------------------------------------------------------------
