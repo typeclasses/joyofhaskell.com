@@ -29,12 +29,12 @@
     }
 
     .text {
-        font-family: 'Merriweather';
+        font-family: Merriweather;
         font-size: 1em;
         color: $black;
 
         h2 {
-            font-family: 'Lato';
+            font-family: Lato;
             color: $brand-primary;
             font-style: italic;
             font-weight: 400;
@@ -45,34 +45,12 @@
         }
 
         em {
-            font-family: 'Merriweather';
+            font-family: Merriweather;
             font-size: 1.25em;
             color: $brand-primary;
         }
-
-        ul {
-            margin-top: 1em;
-            list-style-type: disc;
-            list-style-position: outside;
-            list-style-image: none;
-            }
-
-        /*li {
-            margin-left: 0;
-            }
-
-        img.mappend {
-            height: 1.5em;
-            width: 2em;
-            border-radius: 1em;
-            max-width: 100%;
-            display: inline-block;
-            vertical-align: middle;
-            margin-right: 2.5px;
-            margin-left: 2.5px;
-            }*/
-        }
     }
+}
 
 @media(max-width: 992px) {
 

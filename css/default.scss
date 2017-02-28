@@ -17,6 +17,29 @@ body {
     color: $black;
 }
 
+ul {
+    padding-left: 3.5em;
+    list-style: none;
+
+    li {
+        padding-bottom: 0.5em;
+    }
+
+    li:before {
+        content: '';
+        display: inline-block;
+        height: 1em;
+        width: 1em;
+        position: relative;
+        background-image: url(/images/bullet.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-left: -1em;
+        top: 0.2em;
+        right: 0.2em;
+    }
+}
+
 input, button {
     font-family: $font-family-sans-serif;
 }
