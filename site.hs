@@ -109,6 +109,13 @@ index = do
 templates :: Rules ()
 templates = match "templates/*" $ compile templateCompiler
 
+code :: Rules ()
+code = do
+  match "code/*" $ do
+    route (setExtension "html")
+    compile pandocCompiler
+
+
 --------------------------------------------------------------------
 -- Configuration
 --------------------------------------------------------------------
@@ -130,3 +137,4 @@ main = hakyllWith cfg $ do
   blog
   index
   templates
+  code
