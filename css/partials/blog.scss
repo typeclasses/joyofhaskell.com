@@ -1,19 +1,18 @@
 #archive {
     padding: 4em 0 2em;
-    font-family: 'Merriweather';
+    font-family: Merriweather;
     font-weight: 400;
     font-size: 17px;
     color: $black;
     text-align: left;
 
     h1 {
-        font-family: 'BioRhyme';
+        font-family: BioRhyme;
         font-size: 2em;
         color: $brand-primary;
         line-height: 2em;
         text-align: center;
         font-style: normal;
-
     }
 
     .abstract {
@@ -25,7 +24,7 @@
     .info {
         margin-left: 2em;
         margin-right: 2em;
-        font-family: 'Lato';
+        font-family: Lato;
         font-size: 1em;
         color: $black;
     }
