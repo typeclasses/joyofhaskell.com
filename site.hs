@@ -35,11 +35,15 @@ postCtx =
 
 blogCtx posts =
   listField "posts" postCtx (return posts)
-  <> constField "title" "Blog"
+  <> constField "title" "Blog - The Joy of Haskell"
+  <> defaultContext
+
+authorsCtx =
+  constField "title" "Authors - The Joy of Haskell"
   <> defaultContext
 
 indexCtx =
-  constField "title" "Home"
+  constField "title" "The Joy of Haskell"
   <> constField "twitter-title" "The Joy of Haskell"
   <> constField "twitter-url" "/"
   <> defaultContext
@@ -69,16 +73,6 @@ scssCompiler = do
     output <- unixFilter "sassc" [input] ""
     makeItem output
 
-pages :: Rules ()
-pages = do
-  match "pages/*" $ do
-    route $ customRoute $ joinPath . tail . splitPath
-                        . replaceExtension "html"
-                        . toFilePath
-    compile $ getResourceBody
-      >>= loadAndApplyTemplate "templates/default.html"    postCtx
-      >>= relativizeUrls
-
 posts :: Rules ()
 posts = do
   match "posts/*" $ do
@@ -97,6 +91,16 @@ blog = do
       makeItem ""
         >>= loadAndApplyTemplate "templates/blog.html" (blogCtx posts)
         >>= loadAndApplyTemplate "templates/default.html" (blogCtx posts)
+        >>= relativizeUrls
+
+authors :: Rules ()
+authors = do
+  create ["authors.html"] $ do
+    route idRoute
+    compile $ do
+      makeItem ""
+        >>= loadAndApplyTemplate "templates/authors.html" authorsCtx
+        >>= loadAndApplyTemplate "templates/default.html" authorsCtx
         >>= relativizeUrls
 
 index :: Rules ()
@@ -134,7 +138,7 @@ cfg = defaultConfiguration
 main :: IO ()
 main = hakyllWith cfg $ do
   static
-  pages
+  authors
   posts
   blog
   index
