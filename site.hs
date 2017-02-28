@@ -38,9 +38,8 @@ blogCtx posts =
   <> constField "title" "Blog"
   <> defaultContext
 
-indexCtx posts =
-  listField "posts" postCtx (return posts)
-  <> constField "title" "Home"
+indexCtx =
+  constField "title" "Home"
   <> defaultContext
 
 --------------------------------------------------------------------
@@ -103,9 +102,8 @@ index = do
   match "index.html" $ do
     route idRoute
     compile $ do
-      posts <- recentFirst =<< loadAll "posts/*"
       getResourceBody
-        >>= applyAsTemplate (indexCtx posts)
+        >>= applyAsTemplate indexCtx
         >>= relativizeUrls
 
 templates :: Rules ()
