@@ -10,6 +10,13 @@
 @import 'partials/mailchimp.scss';
 @import 'partials/blog.scss';
 
+/* Add a little spacing to the right of _very_ enthusiastic phrases,
+ * because otherwise the italics abut the next word too closely. */
+strong em,
+em strong {
+  &:after { content: '\00a0'; }
+}
+
 ul {
     padding-left: 3.5em;
     list-style: none;
