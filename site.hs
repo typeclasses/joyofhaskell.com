@@ -36,15 +36,20 @@ postCtx =
 blogCtx posts =
   listField "posts" postCtx (return posts)
   <> constField "title" "Blog - The Joy of Haskell"
+  <> constField "twitter-title" "The Joy of Haskell - Blog"
+  <> constField "twitter-description" "Updates about the book progress and other Haskell-related writings"
   <> defaultContext
 
 authorsCtx =
   constField "title" "Authors - The Joy of Haskell"
+  <> constField "twitter-title" "The Joy of Haskell - Authors"
+  <> constField "twitter-description" "Julie Moronuki & Chris Martin"
   <> defaultContext
 
 indexCtx =
   constField "title" "The Joy of Haskell"
   <> constField "twitter-title" "The Joy of Haskell"
+  <> constField "twitter-description" "A comprehensive exposition of the Haskell ecosystem"
   <> constField "twitter-url" "/"
   <> defaultContext
 
