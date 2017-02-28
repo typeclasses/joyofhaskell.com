@@ -11,6 +11,6 @@ clean: stack-build
 	stack exec -- site clean
 
 deploy: clean build
-	aws s3 sync _site s3://joh-web-public-1 --delete --profile joyofhaskell
+	rsync -avz _site/ deploy@joyofhaskell.com:/home/deploy/web/ --port=36411
 
 .PHONY: build stack-build watch clean deploy
