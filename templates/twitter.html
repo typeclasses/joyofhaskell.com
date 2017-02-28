@@ -1,0 +1,31 @@
+<meta name="twitter:site" content="joyofhaskell"/>
+
+$if(twitter-url)$
+<meta name="twitter:url" content="https://joyofhaskell.com$twitter-url$"/>
+$else$
+<meta name="twitter:url" content="https://joyofhaskell.com$url$"/>
+$endif$
+
+$if(twitter-card)$
+<meta name="twitter:card" content="$twitter-card$"/>
+$else$
+<meta name="twitter:card" content="summary"/>
+$endif$
+
+$if(twitter-title)$
+<meta name="twitter:title" content="$twitter-title$"/>
+$else$
+<meta name="twitter:title" content="The Joy of Haskell"/>
+$endif$
+
+$if(twitter-description)$
+<meta name="twitter:description" content="$twitter-description$"/>
+$else$
+<meta name="twitter:description" content="A guide book to happy Haskelling."/>
+$endif$
+
+$if(twitter-image)$
+<meta name="twitter:image" content="https://joyofhaskell.com$twitter-image$"/>
+$else$
+<meta name="twitter:image" content="https://joyofhaskell.com/images/avatar.png"/>
+$endif$
