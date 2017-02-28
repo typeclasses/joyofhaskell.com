@@ -14,17 +14,10 @@
             color: $body-bg;
             font-family: $font-family-sans-serif;
             font-style: italic;
-            font-size: 18px;
+            font-size: 1.5em;
             font-weight: 300;
             margin-left: 6em;
             margin-top: 12px;
-        }
-
-        .list {
-            font-family: 'Merriweather';
-            font-weight: 300;
-            color: $black;
-
         }
 
         img {
@@ -34,7 +27,52 @@
             right: -20px;
         }
     }
-}
+
+    .text {
+        font-family: 'Merriweather';
+        font-size: 1em;
+        color: $black;
+
+        h2 {
+            font-family: 'Lato';
+            color: $brand-primary;
+            font-style: italic;
+            font-weight: 400;
+        }
+
+        .body {
+            margin-top: 1em;
+        }
+
+        em {
+            font-family: 'Merriweather';
+            font-size: 1.25em;
+            color: $brand-primary;
+        }
+
+        ul {
+            margin-top: 1em;
+            list-style-type: disc;
+            list-style-position: outside;
+            list-style-image: none;
+            }
+
+        /*li {
+            margin-left: 0;
+            }
+
+        img.mappend {
+            height: 1.5em;
+            width: 2em;
+            border-radius: 1em;
+            max-width: 100%;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 2.5px;
+            margin-left: 2.5px;
+            }*/
+        }
+    }
 
 @media(max-width: 992px) {
 
