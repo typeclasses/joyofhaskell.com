@@ -7,12 +7,20 @@
 
     h1 {
         font-family: BioRhyme;
-        font-size: 2em;
+        font-size: 28px;
         color: $brand-primary;
         line-height: 2em;
         text-align: center;
         font-style: normal;
         margin-bottom: 1em;
+
+        @media (min-width: 992px) { font-size: 34px; }
+
+        .args {
+            display: none;
+
+            @media (min-width: 800px) { display: inline; }
+        }
     }
 
     .date {
@@ -20,9 +28,11 @@
     }
 
     .abstract {
-        margin: 0.5em 0 0 1.5em;
+        margin-top: 0.5em;
         font-weight: 300;
         font-style: italic;
+
+        @media (min-width: 800px) { margin-left: 1.5em; }
     }
 
     .info {
@@ -31,43 +41,5 @@
         font-size: 1em;
         color: $black;
         opacity: 0.6;
-    }
-
-    img.smol {
-        height: 2.5em;
-        width: 3em;
-        border-radius: 1em;
-        max-width: 100%;
-        display: inline-block;
-        vertical-align: middle;
-        margin-right: 3px;
-        margin-left: 3px;
-    }
-}
-
-@media (max-width: 992px) {
-
-    #archive {
-
-        h1 {
-            font-size: 28px;
-        }
-    }
-}
-
-@media (max-width: 800px) {
-
-    #archive {
-
-        h1 {
-
-            span {
-                display: none;
-            }
-        }
-
-        .abstract {
-            margin-left: 0;
-        }
     }
 }

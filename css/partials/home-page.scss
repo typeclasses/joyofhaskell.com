@@ -1,13 +1,36 @@
 #home-page {
 
+    /* By default, any div directly inside a .row is occupies all 12 grid
+     * columns. This will get overridden by media queries on wider screens. */
+    .row>div { @include make-col-ready(); @include make-col(12); }
+
     .intro {
-        padding: 90px 0 0px;
+        padding: 30px 0;
         background: $brand-primary;
         color: $body-bg;
-        margin-bottom: 5em;
+        margin-bottom: 2em;
+
+        @media (min-width: 500px) { padding: 40px 0 20px; }
+
+        @media (min-width: 768px) {
+            padding: 90px 0 0px;
+            margin-bottom: 5em;
+        }
+
+        .row>div {
+            &:nth-child(2) { display: none; }
+
+            @media (min-width: 768px) {
+                &:nth-child(1) { @include make-col(7); }
+                &:nth-child(2) { display: block; @include make-col(5); }
+            }
+        }
 
         h1 {
+            display: none;
             color: $body-bg;
+
+            @media (min-width: 500px) { display: block; }
         }
 
         .lead {
@@ -17,8 +40,12 @@
             font-style: italic;
             font-size: 1.5em;
             font-weight: 300;
-            margin-left: 6em;
-            margin-top: 12px;
+            margin-top: 1em;
+            text-align: center;
+
+            @media (min-width: 500px) { text-align: left; }
+            @media (min-width: 768px) { margin-left: 2em; }
+            @media (min-width: 992px) { margin-left: 4em; }
         }
 
         img {
@@ -30,6 +57,9 @@
     }
 
     .text {
+
+        pre.sourceCode { margin: 0.5em 0; }
+
         h2 {
             font-family: $font-family-sans-serif;
             color: $brand-primary;
@@ -37,9 +67,7 @@
             font-weight: $font-weight-bold;
         }
 
-        .body {
-            margin-top: 1em;
-        }
+        .body { margin-top: 1em; }
 
         em {
             font-family: $font-family-base;
@@ -47,48 +75,20 @@
             color: $brand-primary;
         }
 
-        .row {
-            margin-bottom: 3em;
-        }
-    }
+        .row { margin-bottom: 3em; }
 
-    pre.sourceCode {
-        margin: 0.5em 0;
-    }
-}
+        @media (min-width: 992px) {
 
-@media(max-width: 992px) {
+            /* When the screen is sufficiently wide, make all of cells occupy
+             * 6 columns instead of 12, allowing them to show side-by-side. */
+            .row>div { @include make-col(6); }
 
-    #home-page {
-
-        .intro {
-
-            .lead {
-                margin-left: 2em;
+            /* Flip the order of the columns in the first row. */
+            .row-1>div {
+                &:nth-child(1) { @include make-col-push(6); }
+                &:nth-child(2) { @include make-col-pull(6); }
             }
         }
     }
-}
 
-@media(max-width: 768px) {
-
-    #home-page {
-
-        .intro {
-
-            .lead {
-                margin-left: 0;
-            }
-
-            .img {
-                text-align: center;
-            }
-
-            img {
-                width: 120px;
-                position: static;
-                margin: 20px 0;
-            }
-        }
-    }
 }

@@ -1,91 +1,88 @@
 #authors-page {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
+
+    @media (min-width: 992px) { margin-bottom: 50px; }
 
     .purple {
         height: 250px;
         margin-bottom: -230px;
         background-color: $brand-primary;
+        display: none;
+
+        @media (min-width: 768px) { display: block; }
     }
 
     .authors {
+        margin-top: 40px;
 
-        .mappend {
-            padding-top: 50px;
-            text-align: center;
-
-            svg {
-                height: 150px;
-                width: 150px;
-                border-radius: 3px;
-                max-width: 100%;
-                display: inline-block;
-                vertical-align: middle;
-
-                path {
-                    fill: $pink;
-                    stroke: $pink;
-                }
-            }
-        }
-
-        .author {
-            .img {
-                text-align: center;
-
-                img {
-                    width: 250px;
-                    border: 2px solid $brand-primary;
-                    border-radius: 50%;
-                    background-position-y: center;
-                    background-position-x: center;
-                    background-repeat: no-repeat;
-                }
-            }
-
-            .name {
-                margin: 1em 0;
-                text-align: center;
-                color: $brand-primary;
-                font-style: bold;
-            }
-
-            .bio p {
-                font-family: $font-family-base;
-                font-weight: $font-weight-bold;
-            }
-
-            .links {
-                text-align: center;
-                margin-top: 2em;
-            }
-        }
+        @media (min-width: 768px) { margin-top: 0; }
 
         hr {
-            display: none;
+            display: block;
+            margin: 40px 0;
+
+            @media (min-width: 992px) { display: none; }
         }
     }
-}
 
-@media(max-width: 992px) {
+    .mappend, .author {
+        @include make-col-ready();
+    }
 
-    #authors-page {
-        margin-bottom: 40px;
+    .mappend {
+        padding-top: 50px;
+        text-align: center;
+        display: none;
 
-        .purple {
-            display: none;
+        @media (min-width: 992px) { display: block; @include make-col(2); }
+
+        svg {
+            height: 150px;
+            width: 150px;
+            border-radius: 3px;
+            max-width: 100%;
+            display: inline-block;
+            vertical-align: middle;
+
+            path { fill: $pink; stroke: $pink; }
+        }
+    }
+
+    .author {
+        @include make-col(12);
+
+        @media (min-width: 768px) { display: block; @include make-col(6); }
+
+        @media (min-width: 992px) { @include make-col(5); }
+
+        .img {
+            text-align: center;
+
+            img {
+                width: 250px;
+                border: 2px solid $brand-primary;
+                border-radius: 50%;
+                background-position-y: center;
+                background-position-x: center;
+                background-repeat: no-repeat;
+            }
         }
 
-        .authors {
-            margin-top: 40px;
+        .name {
+            margin: 1em 0;
+            text-align: center;
+            color: $brand-primary;
+            font-style: bold;
+        }
 
-            .mappend {
-                display: none;
-            }
+        .bio p {
+            font-family: $font-family-base;
+            font-weight: $font-weight-bold;
+        }
 
-            hr {
-                display: block;
-                margin: 40px 0;
-            }
+        .links {
+            text-align: center;
+            margin-top: 2em;
         }
     }
 }

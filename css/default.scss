@@ -12,25 +12,23 @@
 
 /* Add a little spacing to the right of _very_ enthusiastic phrases,
  * because otherwise the italics abut the next word too closely. */
-strong em,
-em strong {
-  &:after { content: '\00a0'; }
-}
+strong em, em strong { &:after { content: '\00a0'; } }
 
 ul {
+    /* Never show list bullets; we'll be replacing them in our own way. */
     list-style: none;
 
-    li {
-        padding-bottom: 0.5em;
-    }
+    li { padding-bottom: 0.5em; }
 
+    /* In place of the standard bullets, we use a pseudo-element with a
+     * background image that looks like a bullet. */
     li:before {
         content: '';
         display: inline-block;
         height: 1em;
         width: 1em;
         position: relative;
-        background-image: url(/images/bullet.svg);
+        background-image: url('/images/bullet.svg');
         background-size: contain;
         background-repeat: no-repeat;
         margin-left: -1em;
@@ -39,41 +37,13 @@ ul {
     }
 }
 
-input, button {
-    font-family: $font-family-sans-serif;
-}
+input, button { font-family: $font-family-sans-serif; }
 
-hr {
-    border-top: solid 1px $pink;
-}
+hr { border-top: solid 1px $pink; }
 
 .container {
     max-width: 60em;
     @include make-container();
 }
 
-.row {
-    @include make-row();
-}
-
-.content-main {
-    @include make-col-ready();
-
-    @media (max-width: 32em) {
-        @include make-col(6);
-    }
-    @media (min-width: 32.1em) {
-        @include make-col(8);
-    }
-}
-
-.content-secondary {
-    @include make-col-ready();
-
-    @media (max-width: 32em) {
-        @include make-col(6);
-    }
-    @media (min-width: 32.1em) {
-        @include make-col(4);
-    }
-}
+.row { @include make-row(); }

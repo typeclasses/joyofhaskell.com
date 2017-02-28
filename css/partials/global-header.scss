@@ -1,5 +1,6 @@
 #global-header {
     background: $brand-primary;
+    text-align: center;
 
     /* This prevents a sub-pixel gap that might otherwise appear on mobile
      * devices between the header and an abutting element of the same
@@ -7,82 +8,49 @@
      */
     margin-bottom: -1px;
 
-    a, a:link {
-        color: $brand-info;
-    }
+    a, a:link { color: $brand-info; }
 
-    a:hover {
-        color: $body-bg;
-    }
+    a:hover { color: $body-bg; }
 
     .logo {
-        @include float-left;
-        padding: 18px 0;
+        padding: 3em 0 1em;
+
+        @media (min-width: 450px) {
+            @include float-left;
+            padding: 18px 0;
+        }
 
         img.wide {
-            height: 55px;
+            display: none;
+
+            @media (min-width: 992px) {
+                display: inline;
+                height: 55px;
+            }
         }
 
         img.compact {
-            display: none;
+            height: 140px;
+
+            @media (min-width: 450px) { height: 100px; }
+            @media (min-width: 992px) { display: none; }
         }
     }
 
     .links {
-        @include float-right;
         margin: 24px 0 0;
         padding: 0;
         font-family: BioRhyme;
         font-style: italic;
         font-size: 28px;
 
+        @media (min-width: 450px) { @include float-right; }
+
         li {
             display: inline-block;
-            padding: 0 0 0 40px;
-        }
-    }
-}
-
-@media (max-width: 992px) {
-
-    #global-header {
-
-        .logo {
-
-            img.wide {
-                display: none;
-            }
-
-            img.compact {
-                display: inline;
-                height: 100px;
-            }
-        }
-    }
-}
-
-@media (max-width: 450px) {
-
-    #global-header {
-
-        .container {
-            text-align: center;
-        }
-
-        .logo, .links {
-            @include float-none;
-        }
-
-        .logo {
-            padding: 3em 0 1em;
-
-            img.compact {
-                height: 140px;
-            }
-        }
-
-        .links li {
             padding: 0 20px;
+
+            @media (min-width: 450px) { padding: 0 0 0 40px; }
         }
     }
 }
