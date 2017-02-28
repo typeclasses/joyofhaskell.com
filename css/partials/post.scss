@@ -1,12 +1,10 @@
 #post {
     padding: 4em 0 2em;
-    font-family: 'Merriweather';
     font-weight: light;
     font-size: 15px;
-    color: $black;
 
     code { 
-        font-family: 'SpaceMono', monospace;
+        font-family: $font-family-monospace;
         font-size: 15px;
         font-weight: 600;
         background: #FFF6EA;
@@ -18,7 +16,7 @@
     }
 
     h1 {
-        font-family: 'BioRhyme';
+        font-family: BioRhyme;
         font-style: normal;
         font-size: 4em;
         color: $brand-primary;
@@ -27,7 +25,7 @@
     }
 
     h2 {
-        font-family: 'Lato';
+        font-family: $font-family-sans-serif;
         font-style: italic;
         font-size: 3em;
         color: $brand-primary; 
@@ -36,13 +34,14 @@
     }
 
     h3 {
-        font-family: 'Lato';
+        font-family: $font-family-sans-serif;
         font-style: italic;
         font-size: 2em;
         color: $brand-primary;
         text-align: center;
         line-height: 2em;
     }
+
     h4 {
         font-family: 'BioRhyme';
         font-style: italic;
@@ -51,8 +50,9 @@
         text-align: center;
         line-height: 2em;
     }
+
     strong {
-        font-family: 'Lato';
+        font-family: $font-family-sans-serif;
         font-size: 1.25em;
         font-style: bold;
         color: $brand-primary;

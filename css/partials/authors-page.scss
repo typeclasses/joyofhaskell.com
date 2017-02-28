@@ -52,8 +52,8 @@
 
             .bio p {
                 text-align: justify;
-                font-family: 'Merriweather';
-                font-weight: 400;
+                font-family: $font-family-base;
+                font-weight: $font-weight-bold;
             }
 
             .links {

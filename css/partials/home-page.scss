@@ -29,15 +29,11 @@
     }
 
     .text {
-        font-family: Merriweather;
-        font-size: 1em;
-        color: $black;
-
         h2 {
-            font-family: Lato;
+            font-family: $font-family-sans-serif;
             color: $brand-primary;
             font-style: italic;
-            font-weight: 400;
+            font-weight: $font-weight-bold;
         }
 
         .body {
@@ -45,7 +41,7 @@
         }
 
         em {
-            font-family: Merriweather;
+            font-family: $font-family-base;
             font-size: 1.25em;
             color: $brand-primary;
         }

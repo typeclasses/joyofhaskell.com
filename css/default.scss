@@ -10,13 +10,6 @@
 @import 'partials/mailchimp.scss';
 @import 'partials/blog.scss';
 
-body {
-    background: $body-bg;
-    font-family: Merriweather, georgia, serif;
-    font-weight: 300;
-    color: $black;
-}
-
 ul {
     padding-left: 3.5em;
     list-style: none;
