@@ -1,13 +1,4 @@
 {-# LANGUAGE OverloadedStrings #-}
---------------------------------------------------------------------
--- |
--- Copyright :  (c) Stephen Diehl 2013
--- License   :  MIT
--- Maintainer:  stephen.m.diehl@gmail.com
--- Stability :  experimental
--- Portability: non-portable
---
---------------------------------------------------------------------
 
 module Main where
 
