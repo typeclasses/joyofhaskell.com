@@ -40,7 +40,7 @@ authorsCtx =
 indexCtx =
   constField "title" "The Joy of Haskell"
   <> constField "twitter-title" "The Joy of Haskell"
-  <> constField "twitter-description" "A comprehensive exposition of the Haskell ecosystem"
+  <> constField "twitter-description" "A complete guide to the Haskell ecosystem. For intermediate to advanced Haskellers. "
   <> constField "twitter-url" "/"
   <> defaultContext
 

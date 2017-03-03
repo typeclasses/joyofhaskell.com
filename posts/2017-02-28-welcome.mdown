@@ -1,7 +1,7 @@
 ---
 title: The Joy of Haskell
 abstract: Wherein we announce our exciting new project.
-twitter-description: Announcing the exciting new book project of Julie Moronuki and Chris Martin.
+twitter-description: Announcing the new book project of Julie Moronuki and Chris Martin.
 ---
 
 # The Joy of Haskell
