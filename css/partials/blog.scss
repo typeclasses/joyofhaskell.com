@@ -27,7 +27,7 @@
         white-space: nowrap;
     }
 
-    .abstract {
+    .description {
         margin-top: 0.5em;
         font-weight: 300;
         font-style: italic;
@@ -41,5 +41,9 @@
         font-size: 1em;
         color: $black;
         opacity: 0.6;
+    }
+
+    .links {
+        text-align: center;
     }
 }

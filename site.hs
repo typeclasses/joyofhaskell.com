@@ -75,6 +75,7 @@ posts = do
     route $ setExtension "html"
     compile $ compiler
       >>= loadAndApplyTemplate "templates/post.html"    postCtx
+      >>= saveSnapshot "content"
       >>= loadAndApplyTemplate "templates/default.html" postCtx
       >>= relativizeUrls
 
@@ -98,6 +99,15 @@ authors = do
         >>= loadAndApplyTemplate "templates/authors.html" authorsCtx
         >>= loadAndApplyTemplate "templates/default.html" authorsCtx
         >>= relativizeUrls
+
+rssFeed :: Rules ()
+rssFeed = do
+  create ["rss.xml"] $ do
+    route idRoute
+    compile $ do
+      posts <- fmap (take 10) . recentFirst =<<
+            loadAllSnapshots "posts/*" "content"
+      renderRss feedConfig postCtx posts
 
 index :: Rules ()
 index = do
@@ -131,6 +141,15 @@ pandocOptions = defaultHakyllWriterOptions{ writerHTMLMathMethod = MathJax "" }
 cfg :: Configuration
 cfg = defaultConfiguration
 
+feedConfig :: FeedConfiguration
+feedConfig = FeedConfiguration
+     { feedTitle       = "The Joy of Haskell"
+     , feedDescription = "Posts about Haskell and book progress."
+     , feedAuthorName  = "Julie Moronuki and Chris Martin"
+     , feedAuthorEmail = "hello@joyofhaskell.com"
+     , feedRoot        = "https://joyofhaskell.com"
+     }
+
 main :: IO ()
 main = hakyllWith cfg $ do
   static
@@ -140,3 +159,4 @@ main = hakyllWith cfg $ do
   index
   templates
   code
+  rssFeed
