@@ -52,5 +52,11 @@
 
             @media (min-width: 450px) { padding: 0 0 0 40px; }
         }
+
+        .twitter {
+            display: none;
+
+            @media (min-width: 450px) { display: inline-block; }
+        }
     }
 }
