@@ -74,8 +74,8 @@ posts = do
   match "posts/*" $ do
     route $ setExtension "html"
     compile $ compiler
-      >>= loadAndApplyTemplate "templates/post.html"    postCtx
       >>= saveSnapshot "content"
+      >>= loadAndApplyTemplate "templates/post.html"    postCtx
       >>= loadAndApplyTemplate "templates/default.html" postCtx
       >>= relativizeUrls
 
@@ -107,7 +107,7 @@ rssFeed = do
     compile $ do
       posts <- fmap (take 10) . recentFirst =<<
             loadAllSnapshots "posts/*" "content"
-      renderRss feedConfig postCtx posts
+      renderRss feedConfig (bodyField "description" <> postCtx) posts
 
 index :: Rules ()
 index = do
