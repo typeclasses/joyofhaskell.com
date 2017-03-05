@@ -10,15 +10,16 @@
         <div class="row">
             <div class="col-md-6">
                 <p class="info">We will occasionally use this space to provide updates about the book progress or other content that is relevant to this project or, more generally, to our goals of understanding, teaching, and documenting Haskell. Everything here is written by both of us, together. The <a href="/authors.html">author page</a> has links to our individual blogs.</p>
+                <p class="info links"><a href="/rss.xml"><i class="fa fa-rss-square" aria-hidden="true"></i> RSS</a></p>
             </div>
             <div class="col-md-6">
                 <ul>
                 $for(posts)$
                     <li><a href="$url$">$title$</a> -
                         <span class="date">$date$</span>
-                        $if(abstract)$
-                        <p class="abstract">
-                            $abstract$
+                        $if(description)$
+                        <p class="description">
+                            $description$
                         </p>
                         $endif$
                     </li>
