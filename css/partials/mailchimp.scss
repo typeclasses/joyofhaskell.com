@@ -28,7 +28,7 @@
         display: inline-block;
     }
 
-    .button {
+    .btn {
         box-sizing: border-box;
         display: inline-block;
         margin: 0;
@@ -41,6 +41,6 @@
     @media (max-width: 768px) {
         input.email { width: 100%; margin-bottom: 5px; }
         .clear { display: block; width: 100% }
-        .button { width: 100%; margin: 0; }
+        .btn { width: 100%; margin: 0; }
     }
 }
