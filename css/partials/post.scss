@@ -1,26 +1,35 @@
 #post {
-    padding: 4em 0 2em;
+    padding: 0 0 2em;
     font-weight: light;
     font-size: 15px;
 
+    .container {
+        max-width: 50em;
+    }
+
     .info { margin: 0 0 1em; }
+
+    .post-date { text-align: right; }
+
+    h1, h2, h3, h4 {
+        line-height: 1.2em;
+        text-align: center;
+    }
 
     h1 {
         font-family: BioRhyme;
         font-style: normal;
         font-size: 4em;
         color: $brand-primary;
-        text-align: center;
-        line-height: 2em;
+        margin: 1em 0;
     }
 
     h2 {
         font-family: $font-family-sans-serif;
         font-style: italic;
         font-size: 3em;
-        color: $brand-primary; 
-        text-align: center;
-        line-height: 2em;
+        color: $brand-primary;
+        margin: 1em 0 1em;
     }
 
     h3 {
@@ -28,8 +37,7 @@
         font-style: italic;
         font-size: 2em;
         color: $brand-primary;
-        text-align: center;
-        line-height: 2em;
+        margin: 1em 0 1em;
     }
 
     h4 {
@@ -37,14 +45,83 @@
         font-style: italic;
         font-size: 3em;
         color: $blue;
-        text-align: center;
-        line-height: 2em;
+        margin: 0.8em 0 0.5em;
     }
 
-    strong {
-        font-family: $font-family-sans-serif;
-        font-size: 1.25em;
-        font-style: bold;
-        color: $brand-primary;
+    &[data-post-id="welcome"] {
+
+        strong {
+            font-family: $font-family-sans-serif;
+            font-size: 1.25em;
+            font-style: bold;
+            color: $brand-primary;
+        }
+    }
+
+    &[data-post-id="typeclasses-in-translation"] {
+
+        /* All of the tables in this post */
+        .abstraction-table {
+            margin: 2.5em auto;
+            border-spacing: 2px;
+            border-collapse: separate;
+
+            /* The top row */
+            thead {
+
+                /* Cells in the top row */
+                tr>* {
+                    text-align: center;
+                    vertical-align: top;
+                    padding: 0 1em 0.5em;
+                    font-weight: normal;
+
+                    div:nth-child(1) {
+                        margin-bottom: 0.5em;
+                    }
+                }
+            }
+
+            /* Everything but the top row */
+            tbody {
+
+                /* All cells not in the top row */
+                tr>* {
+                    vertical-align: center;
+                }
+
+                /* Cells in the left column */
+                th {
+                    text-align: right;
+                    padding: 1em;
+                    font-weight: normal;
+                }
+
+                /* Main cell, either blank or with a checkmark */
+                td {
+                    text-align: center;
+                    font-weight: bold;
+                    font-size: 200%;
+
+                    div {
+                        opacity: 0.8;
+                    }
+                }
+            }
+
+            &.haskell-table tbody tr>* {
+                background: #e4d0ff;
+            }
+
+            &.java-table tbody tr>*,
+            &.java-table-2 tbody tr>* {
+                background: #b0d4f9;
+            }
+
+            &.java-table-2 tr.bad>* {
+                background: #f9b250;
+            }
+        }
+
     }
 }

@@ -1,4 +1,5 @@
 ---
+post-id: welcome
 title: The Joy of Haskell
 description: Wherein we announce our exciting new project.
 twitter-description: Announcing the new book project of Julie Moronuki and Chris Martin.
@@ -28,7 +29,7 @@ If you recognize yourself in any of this, _then we have good news:_
 
 We've spent a few months figuring out what book we, as Haskell users, want to see. **_The Joy of Haskell_** is a work in progress, the culmination of those discussions, the kind of book we want to help us write better, happier Haskell.
 
-#### Why Joy?  
+#### Why Joy?
 
 We chose the title because *joy* describes our feeling when we discover new things in Haskell, when we write Haskell, when we talk to our friends about Haskell. 
 

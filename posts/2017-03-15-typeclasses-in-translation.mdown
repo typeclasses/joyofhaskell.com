@@ -1,0 +1,283 @@
+---
+post-id: typeclasses-in-translation
+title: Typeclasses in Translation
+description: Java from a Haskeller's perspective; an explanation of why interfaces are sort of, but not quite, related to typeclasses.
+twitter-description: Are typeclasses like interfaces? Not quite. Explaining Java from a Haskeller's perspective.
+---
+
+# Typeclasses in Translation
+
+Second-language learners first speak by translating what they want to say from their native tongue to the target language. That process is slow and error-prone. It&#8217;s better, when you can, to &ldquo;think in&rdquo; the target language; the same is true of trying to understand Haskell via connections to other programming languages.
+
+Programmers usually learn &ldquo;Haskell as a second language&rdquo; and try to connect its concepts to things they understand from past experience. Java programmers ask whether Haskell&#8217;s *typeclasses* are like Java&#8217;s *interfaces*. This is okay for initial intuition, but it obscures some important differences. Better, as you become able, to learn to &ldquo;think in Haskell.&rdquo;
+
+Most answers to this question assume the reader knows Java but not Haskell. Haskell natives are scarce, but one of the authors here learned Haskell as a first programming language. So this post will assume the opposite, and in doing so we hope to demonstrate that Java is just as difficult to a Haskell native as Haskell is to a Java native.
+
+## Haskell
+
+First let's do a quick Haskell recap to be clear on terminology.
+
+Haskell data structures are ***algebraic datatypes*** (specifically, sums and products) defined with the **`data`** keyword.<sup><a href="#footnote-1" name="ref-1">1</a></sup> A ***typeclass declaration*** gives type signatures for operations, which are implemented in different ways by ***typeclass instances*** that define the implementations for a specific type. We can write functions that operate over any type that has an instance of some typeclass `X` and use the operations that `X` defines; when such a function is used with some particular type, the type determines which implementation is used. This is our way to abstract over types.
+
+<table class="abstraction-table haskell-table">
+<thead>
+<tr>
+<th></th>
+<th>Defines a data structure</th>
+<th>Defines an abstraction over types</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>Algebraic datatype</th>
+<td><div>&#10003;</div></td>
+<td></td>
+</tr>
+<tr>
+<th>Typeclass</th>
+<td></td>
+<td><div>&#10003;</div></td>
+</tr>
+</tbody>
+</table>
+
+This is an example of a typeclass:
+
+```haskell
+class Eq a where
+    (==), (/=) :: a -> a -> Bool
+    x /= y = not (x == y)
+```
+
+***Class methods*** are the operations that a typeclass declares. The `Eq` typeclass has two methods, `(==)` and `(/=)`.
+
+For operations that are derivable from other methods in the class, you can write a minimal set of implementations and rely on the ***default methods*** to fill in the rest of the operations. The example above has one default method, `(/=)`.
+
+The ***typeclass instance*** is where the operations described in the typeclass declaration are implemented for a particular type. An instance is a unique relationship between a type and a typeclass.
+
+This is an instance of the `Eq` typeclass instance for `Bool` (a type) that defines `(==)` and takes the default implementation of `(/=)`:
+
+```haskell
+instance Eq Bool where
+    True  == True  = True
+    False == False = True
+    _     == _     = False
+```
+
+A ***type*** consists of the combination of a data structure and its associated typeclass instances.
+
+## A subset of Java
+
+We might start explaining interfaces to our Haskell native by highlighting the similarities with a simplified model of Java, omitting some constructs that don&#8217;t have close Haskell analogs.
+
+In our simplified Java, a ***type*** is either an *interface* or a *class* (specifically, a *final* class, which we&#8217;ll discuss later. An ***interface*** gives type signatures for operations which are implemented in different ways by each ***class***, and the class defines the implementations for a specific subtype. We can write code that interacts with a value belonging to interface `X` and uses the operations that `X` defines; the class to which the value belongs determines which implementation is used. This is our way to abstract over types &mdash; like a typeclass!
+
+<table class="abstraction-table java-table">
+<thead>
+<tr>
+<th></th>
+<th>Defines a data structure</th>
+<th>Defines an abstraction over types</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>Class</th>
+<td><div>&#10003;</div></td>
+<td></td>
+</tr>
+<tr>
+<th>Interface</th>
+<td></td>
+<td><div>&#10003;</div></td>
+</tr>
+</tbody>
+</table>
+
+But this obscures a number of differences between this and the Haskell system.
+
+A ***method*** is sort of like a top-level function definition in Haskell, but it is defined as part of a type, and it has an implicit first argument of that type.
+
+This is an example of an interface:
+
+```java
+interface Comparator<A> {
+
+    Ordering compare(A x, A y);
+
+    boolean lessThanOrEqual(A x, A y) {
+        Ordering o = compare(x, y);
+        return o == LT || o == EQ;
+    }
+}
+```
+
+This `Comparator` interface has two methods, `compare` and `lessThanOrEqual`. The `compare` method is just a type signature with no implementation. `lessThanOrEqual` provides an implementation, so it is called a ***default method***, similar to the terminology used for Haskell typeclasses.
+
+This is an example of a class that implements that interface:
+
+```java
+class IntComparator implements Comparator<Integer> {
+
+    boolean reverse;
+
+    Ordering compare(A x, A y) {
+        if (x.equals(y))
+            return EQ;
+        else if ((x < y) ^ reverse)
+            return LT;
+        else
+            return GT;
+    }
+}
+```
+
+A ***class*** has ***fields*** that define a data structure (specifically, the structure is the product of its fields, and Java has no direct way to encode sum types). The `IntComparator` class above has one field, `reverse`. The class also implements the `compare` method from `Comparator`.
+
+The relationship between classes and interfaces is ***subtyping***. A class definition can specify that it ***implements*** any number of interfaces, and it ***inherits*** the interfaces&#8217; methods. (More jargon: We say that the class is a ***subtype*** of each interface, and the interfaces are its ***supertypes***.)
+
+Notice that both Haskell and Java have a concept called *method* which consists of an overloaded name and a type signature. The differences, which we&#8217;ll expand on later lie in the discrepancies between the exact definitions of *method* in the two languages, and the specific ways in which types are related to the abstractions over them.
+
+## Java proper
+
+We wouldn&#8217;t be giving full justice to the complexity of Java&#8217;s type system unless we also brought up the other kinds of classes. Subtyping gets weird when we introduce types that both have fields *and* permit subtypes (highlighted in orange below). These are both data structures *and* abstractions over types.
+
+<table class="abstraction-table java-table-2">
+<thead>
+<tr>
+<th></th>
+<th><div>Complete data structure</div><div>(is *instantiable*)</div></th>
+<th><div>Partial data structure</div><div>(can have *fields*)</div></th>
+<th><div>Abstraction over types</div><div>(can have *subtypes*)</div></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>Final class</th>
+<td><div>&#10003;</div></td>
+<td><div>&#10003;</div></td>
+<td></td>
+</tr>
+<tr class="bad">
+<th>Class</th>
+<td><div>&#10003;</div></td>
+<td><div>&#10003;</div></td>
+<td><div>&#10003;</div></td>
+</tr>
+<tr class="bad">
+<th>Abstract class</th>
+<td></td>
+<td><div>&#10003;</div></td>
+<td><div>&#10003;</div></td>
+</tr>
+<tr>
+<th>Interface</th>
+<td></td>
+<td></td>
+<td><div>&#10003;</div></td>
+</tr>
+</tbody>
+</table>
+
+The fields in an ***abstract class*** constitute &quot;part of&quot; a data structure, which can be augmented by additional fields in a subtype.
+
+Classes that are ***final*** cannot have subtypes. A type that is *non-final* serves as an abstraction over its subtypes in the same way that an interface does.
+
+Classes that are not ***abstract*** are ***instantiable***, meaning that we can call their constructors to create instances of the class.
+
+Types in Java serve as, among other roles, templates for defining other types. A type can be &quot;incomplete&quot; in the sense that it doesn&#8217;t define all of the things that you would need in order to actually use it. Such a type only exists in order to build subtypes from it. Its subtypes fill in these blanks, so to speak. If a type has no holes &mdash; no pieces of its definition left undefined &mdash; only then is the type instantiable.
+
+We didn&#8217;t mention these things in our original description of interfaces to the native Haskeller because none of these things have good analogs in Haskell. But they&#8217;re important to understanding Java on its own terms.
+
+## Are typeclasses like interfaces?
+
+From 30,000 feet up, these two language features have a resemblance: They define abstractions that codify similarities between types, and these abstractions permit generic code that works across multiple types.
+
+Translation between the two languages can work, but not always.
+
+Consider this typeclass `Semigroup`:
+
+```haskell
+class Semigroup a where
+    (<>) :: a -> a -> a
+```
+
+and a function `triple` that uses a `Semigroup` constraint:
+
+```haskell
+triple :: Semigroup a => a -> a
+triple x = x <> x <> x
+```
+
+We can consider two ways to write this code into a Java using interfaces.
+
+The first is a direct translation:
+
+```java
+interface Semigroup<A> {
+    A append(A x, A y);
+}
+```
+
+Instances of this `Semigroup` interface are the semigroups themselves. Note that the relationship between a `Semigroup` instance and its type parameter `A` is *not* unique; there&#8217;s nothing stopping us from creating multiple semigroups for any type. When we use this interface, then, we have to explictly pass a `Semigroup` argument to specify which semigroup we&#8217;re using.
+
+```java
+<A> A triple(A x, Semigroup<A> semigroup) {
+    return semigroup.append(semigroup.append(x, x), x);
+}
+```
+
+If we want to create a unique association between a type and a semigroup, and not have to manually pass the semigroup instance everywhere we use it, we can do a little refactor. Since the `x` parameter has type `A`, we can remove it and instead let types with semigroups implement the interface, turning the explicit `x` parameter into the implicit `this` parameter that refers to the instance of the class that `A` that implements `Semigroupal<A>`.
+
+```java
+interface Semigroupal<A> {
+    A appendTo(A y);
+}
+```
+
+```java
+<A extends Semigroupal<A>> A triple(A x) {
+    return x.appendTo(x).appendTo(x);
+}
+```
+
+That is the more natural way a native Java user thinks about abstraction. But the set of Haskell typeclasses that can be converted to Java interfaces in this way is limited. The conversion from `Semigroup` to `Semigroupal` in this example relied on `append` having an argument of type `A`. What happens when that isn&#8217;t the case?
+
+Consider another typeclass, `Monoid`:
+
+```haskell
+class Semigroup a => Monoid a where
+    mempty :: a
+```
+
+We can write the direct translation of this into Java as before:
+
+```haskell
+interface Monoid<A> extends Semigroup<A> {
+    A mempty();
+}
+```
+
+But the more idiomatic Java variation simply cannot be written.
+
+```java
+interface Monoidal extends Semigroupal<A> {
+    ???
+}
+```
+
+This thing that Java cannot do is called *return type polymorphism*. The implementation of `mempty` is implied not by the type of an argument *to* the function, but by the type that we need to get *from* the function.
+
+## Conclusion
+
+We&#8217;re not here to criticize Java but to challenge the popular wisdom that Haskell is more difficult to learn. If Haskell is your first language, then Java is hard, Java is alien. Java has a steep learning curve too; many Java-habituated Haskell learners forget that.
+
+Some of the difficulty in crossing between these languages is just the bramble of shared terminology with different meanings: *constructor*, *method*, *type*, *concrete type*, *class*, *instance*, *field*, *polymorphic*. But some of it is a deep paradigm conflict: Haskell has full compile-time type resolution, Java has subtyping and dynamic dispatch.
+
+It&#8217;s tempting to cling to your understanding of one while you learn the other. But the abstractions that typeclasses and interfaces provide over types are disparate, and it is difficult to reconcile them. You&#8217;re better off making a clean break from what you know and starting over with a full embrace of the language you&#8217;re learning.
+
+<br>
+
+**Footnotes**
+
+*<a href="#ref-1" name="footnote-1"><sup>1</sup></a> Usually it&#8217;s `data`. There are other keywords that can introduce types but their effects on how types are defined and relate to typeclasses are minimal. Some Haskell features, such as existentially-quantified types, are more complex, but these are not core concepts.*
