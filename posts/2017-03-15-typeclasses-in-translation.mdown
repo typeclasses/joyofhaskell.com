@@ -1,6 +1,7 @@
 ---
 post-id: typeclasses-in-translation
 title: Typeclasses in Translation
+twitter-title: Typeclasses in Translation
 description: Java from a Haskeller's perspective; an explanation of why interfaces are sort of, but not quite, related to typeclasses.
 twitter-description: Are typeclasses like interfaces? Not quite. Explaining Java from a Haskeller's perspective.
 ---
@@ -19,12 +20,13 @@ First let's do a quick Haskell recap to be clear on terminology.
 
 Haskell data structures are ***algebraic datatypes*** (specifically, sums and products) defined with the **`data`** keyword.<sup><a href="#footnote-1" name="ref-1">1</a></sup> A ***typeclass declaration*** gives type signatures for operations, which are implemented in different ways by ***typeclass instances*** that define the implementations for a specific type. We can write functions that operate over any type that has an instance of some typeclass `X` and use the operations that `X` defines; when such a function is used with some particular type, the type determines which implementation is used. This is our way to abstract over types.
 
-<table class="abstraction-table haskell-table">
+<div class="abstraction-table haskell-table">
+<table>
 <thead>
 <tr>
 <th></th>
-<th>Defines a data structure</th>
-<th>Defines an abstraction over types</th>
+<th><span>Defines a</span> <span>data structure</span></th>
+<th><span>Defines an</span> abstraction <span>over types</span></th>
 </tr>
 </thead>
 <tbody>
@@ -40,6 +42,7 @@ Haskell data structures are ***algebraic datatypes*** (specifically, sums and pr
 </tr>
 </tbody>
 </table>
+</div>
 
 This is an example of a typeclass:
 
@@ -72,12 +75,13 @@ We might start explaining interfaces to our Haskell native by highlighting the s
 
 In our simplified Java, a ***type*** is either an *interface* or a *class* (specifically, a *final* class, which we&#8217;ll discuss later. An ***interface*** gives type signatures for operations which are implemented in different ways by each ***class***, and the class defines the implementations for a specific subtype. We can write code that interacts with a value belonging to interface `X` and uses the operations that `X` defines; the class to which the value belongs determines which implementation is used. This is our way to abstract over types &mdash; like a typeclass!
 
-<table class="abstraction-table java-table">
+<div class="abstraction-table java-table">
+<table>
 <thead>
 <tr>
 <th></th>
-<th>Defines a data structure</th>
-<th>Defines an abstraction over types</th>
+<th><span>Defines a</span> <span>data structure</span></th>
+<th><span>Defines an</span> abstraction <span>over types</span></th>
 </tr>
 </thead>
 <tbody>
@@ -93,6 +97,7 @@ In our simplified Java, a ***type*** is either an *interface* or a *class* (spec
 </tr>
 </tbody>
 </table>
+</div>
 
 But this obscures a number of differences between this and the Haskell system.
 
@@ -142,13 +147,14 @@ Notice that both Haskell and Java have a concept called *method* which consists 
 
 We wouldn&#8217;t be giving full justice to the complexity of Java&#8217;s type system unless we also brought up the other kinds of classes. Subtyping gets weird when we introduce types that both have fields *and* permit subtypes (highlighted in orange below). These are both data structures *and* abstractions over types.
 
-<table class="abstraction-table java-table-2">
+<div class="abstraction-table java-table-2">
+<table>
 <thead>
 <tr>
 <th></th>
-<th><div>Complete data structure</div><div>(is *instantiable*)</div></th>
-<th><div>Partial data structure</div><div>(can have *fields*)</div></th>
-<th><div>Abstraction over types</div><div>(can have *subtypes*)</div></th>
+<th><div>Complete data structure</div><div><span>(is *instantiable*)</span></div></th>
+<th><div>Partial data structure</div><div>(<span>can have</span> *fields*)</div></th>
+<th><div>Abstraction <span>over types</span></div><div>(<span>can have</span> *subtypes*)</div></th>
 </tr>
 </thead>
 <tbody>
@@ -178,6 +184,7 @@ We wouldn&#8217;t be giving full justice to the complexity of Java&#8217;s type 
 </tr>
 </tbody>
 </table>
+</div>
 
 The fields in an ***abstract class*** constitute &quot;part of&quot; a data structure, which can be augmented by additional fields in a subtype.
 

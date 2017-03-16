@@ -1,8 +1,11 @@
 h1 {
     font-family: 'BioRhyme';
     font-style: italic;
-    font-size: 40px;
     color: $brand-primary;
+
+    font-size: 30px;
+    @media (min-width: 450px) { font-size: 35px; }
+    @media (min-width: 768px) { font-size: 40px; }
 }
 
 h2 {

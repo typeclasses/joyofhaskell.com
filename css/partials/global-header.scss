@@ -39,12 +39,14 @@
 
     .links {
         margin: 24px 0 0;
-        padding: 0;
+        padding: 0 0 2em;
         font-family: BioRhyme;
         font-style: italic;
         font-size: 28px;
 
         @media (min-width: 450px) { @include float-right; }
+
+        @media (min-width: 768px) { padding-bottom: 0; }
 
         li {
             display: inline-block;

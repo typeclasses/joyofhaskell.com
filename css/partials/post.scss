@@ -19,7 +19,6 @@
     h1 {
         font-family: BioRhyme;
         font-style: normal;
-        font-size: 4em;
         color: $brand-primary;
         margin: 1em 0;
     }
@@ -27,7 +26,6 @@
     h2 {
         font-family: $font-family-sans-serif;
         font-style: italic;
-        font-size: 3em;
         color: $brand-primary;
         margin: 1em 0 1em;
     }
@@ -35,7 +33,6 @@
     h3 {
         font-family: $font-family-sans-serif;
         font-style: italic;
-        font-size: 2em;
         color: $brand-primary;
         margin: 1em 0 1em;
     }
@@ -43,7 +40,7 @@
     h4 {
         font-family: BioRhyme;
         font-style: italic;
-        font-size: 3em;
+        font-size: 40px;
         color: $blue;
         margin: 0.8em 0 0.5em;
     }
@@ -63,8 +60,16 @@
         /* All of the tables in this post */
         .abstraction-table {
             margin: 2.5em auto;
-            border-spacing: 2px;
-            border-collapse: separate;
+            max-width: 100%;
+            overflow-x: auto;
+            border: 1px solid rgba(0,0,0,0.2);
+
+            table {
+                border-spacing: 2px;
+                border-collapse: separate;
+                margin: 1em;
+                display: inline-block;
+            }
 
             /* The top row */
             thead {
@@ -79,6 +84,10 @@
                     div:nth-child(1) {
                         margin-bottom: 0.5em;
                     }
+                }
+
+                span {
+                    white-space: nowrap;
                 }
             }
 
@@ -95,6 +104,7 @@
                     text-align: right;
                     padding: 1em;
                     font-weight: normal;
+                    white-space: nowrap;
                 }
 
                 /* Main cell, either blank or with a checkmark */
