@@ -268,7 +268,7 @@ interface Monoid<A> extends Semigroup<A> {
 But the more idiomatic Java variation simply cannot be written.
 
 ```java
-interface Monoidal extends Semigroupal<A> {
+interface Monoidal<A> extends Semigroupal<A> {
     ???
 }
 ```
