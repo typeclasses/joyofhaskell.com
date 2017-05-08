@@ -134,4 +134,39 @@
         }
 
     }
+
+    &[data-post-id="dialogues-on-do-notation"] {
+
+        .dialogue {
+            margin: 2em 0;
+
+            .line {
+                padding-left: 70px;
+                position: relative;
+
+                .name {
+                    width: 60px;
+                    text-align: right;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    font-weight: bold;
+                    font-style: italic;
+                    opacity: 0.6;
+                }
+            }
+        }
+
+        .hr {
+            opacity: 0.2;
+            text-align: center;
+            margin: 2.5em 0;
+            letter-spacing: 1em;
+        }
+
+        .footnotes sup {
+            display: inline-block;
+            padding: 0 0.5em;
+        }
+    }
 }
