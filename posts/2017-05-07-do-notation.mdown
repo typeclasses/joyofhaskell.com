@@ -11,7 +11,7 @@ These dialogue snippets are from a series of conversations occurring over months
 
 <div class="hr">●●●</div>
 
-The first time we realized that we even have a disagreement came in a conversation about Applicative. This was right before I was going to teach a class about Applicative and was trying to figure out what syntax people unfamiliar with Applicative find easiest to read:
+The first time we realized that we have a disagreement came in a conversation about Applicative. This was right before I was going to teach a class about Applicative and was trying to figure out what syntax people unfamiliar with Applicative find easiest to read:
 
 <div class="dialogue">
 
@@ -59,7 +59,7 @@ in front of a student who isn&#8217;t ready for it, they freak out.
 
 <div class="hr">●●●</div>
 
-After this [series of tweets](https://twitter.com/chris__martin/status/854480397173800960), I had a bone to pick with Mr. Martin:
+This [series of tweets](https://twitter.com/chris__martin/status/854480397173800960) led to another conversation:
 
 <div class="dialogue">
 
@@ -121,12 +121,12 @@ And it feels to me like it&#8217;s hiding the functors, it&#8217;s hiding the ma
 
 <div class="hr">●●●</div>
 
-A couple days later, as I was editing the Parsers chapter of [Haskell book](http://haskellbook.com/), I noticed there is a ton of `do` notation in that chapter. I didn&#8217;t have much of an opinion about `do` syntax at the time we wrote it; this is a developing crankiness on my part. At any rate, I raised the conversation again:
+A couple days later, as Julie was editing the Parsers chapter of [Haskell book](http://haskellbook.com/), she noticed there is a ton of `do` notation in that chapter. And that led to another conversation:
 
 <div class="dialogue">
 
 <div class="line">
-<div class="name">Julie:</div> I just noticed there&#8217;s `do` notation all over the Parsers chapter. Take this for example:
+<div class="name">Julie:</div> I just noticed there&#8217;s `do` notation all over the Parsers chapter. I didn&#8217;t have much of an opinion about `do` syntax at the time we wrote it; this is a developing crankiness on my part. Take this for example:
 
 ```haskell
 parseSection :: Parser Section
@@ -158,7 +158,7 @@ I think that&#8217;s a good example of something that is easier for most people 
 
 <div class="line">
 <div class="name">Julie:</div> Aha!
-> Functions are in my comfort zone; syntax that hides them takes me out of my comfort zone. &mdash; [Paul Hudak on `do` notation](https://mail.haskell.org/pipermail/haskell-cafe/2007-August/030178.html).
+<blockquote>&ldquo;Functions are in my comfort zone; syntax that hides them takes me out of my comfort zone.&rdquo;</blockquote> &mdash; [Paul Hudak on `do` notation](https://mail.haskell.org/pipermail/haskell-cafe/2007-August/030178.html).
 I am in good company with my bad opinions!
 
 On the other hand, I like [this perspective](https://mail.haskell.org/pipermail/haskell-cafe/2007-August/030185.html) as well.
@@ -185,7 +185,7 @@ On the other hand, I like [this perspective](https://mail.haskell.org/pipermail/
 </div>
 
 <div class="line">
-<div class="name">Julie:</div> Yes. I&#8217;m just doing this thing where I&#8217;m surrounded by people who seem to all agree on their love of `do` notation, so I feel like my opinion is actually wrong but I just don&#8217;t know it because I&#8217;m not a real enough programmer. So I&#8217;m seeking validation that, like, it&#8217;s OK to have my opinion. You already have the confidence to have your opinion, but I do not.
+<div class="name">Julie:</div> Yes. I&#8217;m just doing this thing where I&#8217;m surrounded by people who seem to all agree on their love of `do` notation, so I feel like my opinion is actually wrong but I just don&#8217;t know it because I&#8217;m not a real enough programmer. So I&#8217;m seeking validation that it&#8217;s OK to have my opinion. You already have the confidence to have your opinion, but I do not.
 </div>
 
 <div class="line">
@@ -369,8 +369,11 @@ I had a bunch of stuff that could be moved out of `IO` functions.
 <div class="dialogue">
 
 <div class="line">
-<div class="name">Julie:</div> I&#8217;ve been thinking about starting a FITEME series of blog posts, including one about `do` notation, so i may quote you. Hue hue.
-> Don&#8217;t focus on connecting Monad and Applicative to `do` notation; that&#8217;s true, but it&#8217;s a distraction.<a name="footnote-mark-2" href="#footnote-2"><sup>2</sup></a>
+<div class="name">Julie:</div> I&#8217;ve been thinking about starting a FITEME series of blog posts, including one about `do` notation, so i may quote you:
+
+&ldquo;Don&#8217;t focus on connecting Monad and Applicative to `do` notation; that&#8217;s true, but it&#8217;s a distraction.&rdquo;<a name="footnote-mark-2" href="#footnote-2"><sup>2</sup></a>
+
+Hue hue.
 </div>
 
 </div>
