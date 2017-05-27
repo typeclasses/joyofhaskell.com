@@ -1,5 +1,5 @@
 ---
-post-id: typeclasses-in-translation
+post-class: typeclasses-in-translation
 title: Typeclasses in Translation
 twitter-title: Typeclasses in Translation
 description: Java from a Haskeller's perspective; an explanation of why interfaces are sort of, but not quite, related to typeclasses.

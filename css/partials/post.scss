@@ -45,7 +45,7 @@
         margin: 0.8em 0 0.5em;
     }
 
-    &[data-post-id="welcome"] {
+    &.welcome {
 
         strong {
             font-family: $font-family-sans-serif;
@@ -55,7 +55,7 @@
         }
     }
 
-    &[data-post-id="typeclasses-in-translation"] {
+    &.typeclasses-in-translation {
 
         /* All of the tables in this post */
         .abstraction-table {
@@ -135,7 +135,7 @@
 
     }
 
-    &[data-post-id="dialogues-on-do-notation"] {
+    &.dialogues {
 
         .dialogue {
             margin: 2em 0;

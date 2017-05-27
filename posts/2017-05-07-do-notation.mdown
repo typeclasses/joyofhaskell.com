@@ -1,5 +1,5 @@
 ---
-post-id: dialogues-on-do-notation
+post-class: dialogues
 title: Dialogues on <code>do</code> notation
 twitter-title: Dialogues on do notation
 description: Dialogues on Haskell&#8217;s <code>do</code> notation, <code>for</code> loops, and related matters. These took place over several months, and we learned from each other in the process.
