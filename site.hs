@@ -1,9 +1,10 @@
-{-# LANGUAGE OverloadedStrings #-}
+{-# LANGUAGE OverloadedStrings, ScopedTypeVariables #-}
 
 module Main where
 
 import Hakyll
 import Text.Pandoc
+import Data.Maybe (catMaybes)
 import Data.Monoid ((<>))
 import qualified Data.Map as M
 import System.FilePath (joinPath, splitPath, replaceExtension)
@@ -84,7 +85,7 @@ blog = do
   create ["blog.html"] $ do
     route idRoute
     compile $ do
-      posts <- recentFirst =<< loadAll "posts/*"
+      posts <- recentFirst =<< filterListed =<< loadAll "posts/*"
       makeItem ""
         >>= loadAndApplyTemplate "templates/blog.html" (blogCtx posts)
         >>= loadAndApplyTemplate "templates/default.html" (blogCtx posts)
@@ -105,9 +106,33 @@ rssFeed = do
   create ["rss.xml"] $ do
     route idRoute
     compile $ do
-      posts <- fmap (take 10) . recentFirst =<<
+      posts <- fmap (take 10) . recentFirst =<< filterListed =<<
             loadAllSnapshots "posts/*" "content"
       renderRss feedConfig (bodyField "description" <> postCtx) posts
+
+filterListed :: MonadMetadata m => [Item a] -> m [Item a]
+filterListed =
+    filterM $ isListed . itemIdentifier
+  where
+    filterM :: Monad m => (a -> m Bool) -> [a] -> m [a]
+    filterM f xs =
+      catMaybes <$> traverse (\i -> (\b -> if b then Just i else Nothing) <$> f i) xs
+
+isListed :: forall m.
+  MonadMetadata m
+  => Identifier -- ^ Input page
+  -> m Bool
+isListed id' =
+  getMetadata id' >>= \(metadata :: Metadata) ->
+  case lookupString "listed" metadata of
+    Nothing -> fail $ "There is no 'listed' attribute for " <> show id'
+    Just s -> parseListed s
+
+  where
+    parseListed :: String -> m Bool
+    parseListed "true" = pure True
+    parseListed "false" = pure False
+    parseListed s = fail $ "Could not parse 'listed' attribute for " <> show id' <> ": \"" <> s <> "\""
 
 index :: Rules ()
 index = do

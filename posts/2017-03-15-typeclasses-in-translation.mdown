@@ -4,6 +4,7 @@ title: Typeclasses in Translation
 twitter-title: Typeclasses in Translation
 description: Java from a Haskeller's perspective; an explanation of why interfaces are sort of, but not quite, related to typeclasses.
 twitter-description: Are typeclasses like interfaces? Not quite. Explaining Java from a Haskeller's perspective.
+listed: yes
 ---
 
 # Typeclasses in Translation

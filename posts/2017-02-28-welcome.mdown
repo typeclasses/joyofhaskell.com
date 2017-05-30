@@ -3,6 +3,7 @@ post-class: welcome
 title: The Joy of Haskell
 description: Wherein we announce our exciting new project.
 twitter-description: Announcing the new book project of Julie Moronuki and Chris Martin.
+listed: yes
 ---
 
 # The Joy of Haskell
