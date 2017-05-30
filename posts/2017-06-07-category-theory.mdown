@@ -1,0 +1,161 @@
+---
+post-class: dialogues
+title: Category theory considered harmful
+twitter-title: What we talk about when we talk about types.
+description: Dialogues in which we pedantically dissect the relationship between types, type constructors, typeclasses, the instances that tie them all together, and set theory.
+listed: no
+---
+# Category theory considered harmful
+
+A continuation of the discussion of types and typeclasses.
+
+** add to this; also be sure the line about "so Joy will have more set theory than category theory" is in here
+
+learning some math is helpful for haskell, but maybe more set theory than category theory
+
+<div class="hr">●●●</div>
+
+Then Chris tweeted this:
+
+<blockquote> I think I'm coming to realize this:
+
+Talk to your kids about category theory, or else Haskellers might talk to them first.
+
+Learn Haskell, learn category theory, but for god's sake not at the same time.
+
+Here's what happened to me: All the same people I saw talking about Haskell, I also saw talking about CT. From that, I made wrong inferences.</blockquote>
+
+And Julie said "agh" and then responded:
+
+<blockquote> You can learn either, or neither, or both at the same time, like learning French and Spanish at the same time.</blockquote>
+
+<div class="dialogue">
+
+<div class="line">
+<div class="name">Chris:</div> I thought this revelation was sort of related to our chat. For a long time I thought "monoid" was only a category theory concept. I didn't know it generalized monoids from set theory. So I thought the `Monoid` typeclass was just this sort of bastardized version of the category concept, and kept trying to relate it to that, when really I should have been thinking a lot more about sets in a lot of these discussions.
+</div>
+
+<div class="line">
+<div class="name">Julie:</div> I see. I understand, but I don't think telling people not to do them at the same time is necessary. I moved from types to set theory to category theory because I already knew some Boolean algebra. I saw that there are sum and product types and what Haskell calls monoids followed the same pattern. To be clear, in Boolean algebra and set theory, I don't remember seeing the word *monoid*. I guess when category theory generalized that idea, it needed a word.
+</div>
+
+<div class="line">
+<div class="name">Chris:</div> I guess it was more commentary about learning CT *from* Haskellers more than about literally learning at the same time.
+</div>
+
+<div class="line">
+<div class="name">Julie:</div> Or thinking that learning CT will teach you important things about Haskell. It could, but not for day-to-day making web apps in Haskell. I do think "ignore Haskellers who try to explain a Haskell thing via category theory" is good advice. Unless it's actually `Category` or something, but this is way outside normal Haskell you need to do programming. Thus the "French-Spanish" analogy. They have some things in common, but they're not the same. They are different languages. Perhaps French and Romanian would have been more apt. Also where the analogy holds: there are a bunch of cognates, but that doesn't mean they are the same word.
+
+Plane still hasn't left, but I was able to plug my phone in so I can keep arguing with you. You're not tired of me yet?
+</div>
+
+<div class="line">
+<div class="name">Chris:</div> Not a bit.
+</div>
+
+<div class="line">
+<div class="name">Julie:</div> Also, sometimes people pick weird things from category theory, find them not useful, then inappropriately generalize to things that are useful. Groups and rings may not be super useful in programming, but monoids sure are, at least when we're talking about types and type constructors.
+</div>
+
+<div class="line">
+<div class="name">Chris:</div> I don't know, I think some of your gripes would be addressed by a proper `Ring` typeclass. List could be generalized in with the numbers and stuff.
+</div>
+
+<div class="line">
+<div class="name">Julie:</div> Well, lists are weird. I think lists deserve special treatment. You know how monoids are a class of types not type constructors?
+</div>
+
+<div class="line">
+<div class="name">Chris:</div> Yeah.
+</div>
+
+<div class="line">
+<div class="name">Julie:</div> That's why it's a monoid over [a] not []. The `Maybe` monoids can ignore whatever `a` value there might be, although you can also do `Just (a <> a)`. But the list monoids don't work the same. They are a conjunction or disjunction of the `a` values, not the list constructor. Whereas the `Maybe` monoids are conjunctions or disjunctions of `Maybe`. Sorry. I don't know why I'm mansplaining this to you.
+</div>
+
+</div>
+
+<div class="hr">●●●</div>
+
+
+<div class="dialogue">
+
+<div class="line">
+<div class="name">Julie:</div> Sometimes I think Milewski isn't talking about category theory so much as about set theory.
+</div>
+
+<div class="line">
+<div class="name">Chris:</div> He's definitely coming at it as "a generalization of set theory," which I think is an appropriate direction to come from if you're trying to relate it to programming.
+</div>
+
+<div class="line">
+<div class="name">Julie:</div> Categories don't care what the objects are. When we talk about Haskell, we're nearly always talking about sets. So then could we call it set theory?
+</div>
+
+<div class="line">
+<div class="name">Chris:</div> Yeah, what I have yet to find out is what we gain from category theory.
+</div>
+
+<div class="line">
+<div class="name">Julie:</div> For Haskell? Or for mathematics?
+</div>
+
+<div class="line">
+<div class="name">Chris:</div> Usually with abstractions like this, you go up in abstraction, learn something there, and then come back down and apply whatever theorem or something you've learned. With category theory we seem to be giving a lot of names to things, but I've yet to know what we've learned from it, what we come back down from it with, that we couldn't have done in set theory.
+</div>
+
+<div class="line">
+<div class="name">Julie:</div> Again, do you mean for Haskell or for mathematics?
+</div>
+
+<div class="line">
+<div class="name">Chris:</div> Either. Well, Haskell, I guess.
+</div>
+
+<div class="line">
+<div class="name">Julie:</div> For Haskell, I have no answer. I don't think it's given us much that set theory did not already give us. For mathematics, I think it shows us similarities between what were formerly disparate fields.
+</div>
+
+<div class="line">
+<div class="name">Chris:</div> Maybe it's the progenitor for some insights that were brought to set theory from other fields, which is useful and valuable for certain things.
+</div>
+
+<div class="line">
+<div class="name">Julie:</div> Yes, I think that's probably true, and I don't know enough of that history, perhaps, to say. It might be that it provided some motivation for Haskell to treat the function type like any other type, for example, or some justification for that.
+</div>
+
+<div class="line">
+<div class="name">Chris:</div> I really liked Milewski's introduction to Kleisli categories, and now I'm wondering...why not forget the categories and just teach people about Kleisli mappings in sets?
+</div>
+
+<div class="line">
+<div class="name">Julie:</div> Yeah, I'm hoping that as I do understand more about category theory, I'll see more of what we get from it for understanding Haskell that we couldn't get from set theory. Maybe some stuff in type-level programming? But I sort of feel sometimes that Haskellers bring up category theory a lot, instead of set theory, because it sounds cooler. I say this as a person who sorta likes category theory.
+</div>
+
+<div class="line">
+<div class="name">Chris:</div> Yes, or, to be more charitable, perhaps bringing up CT in appreciation for where some ideas came from.
+</div>
+
+<div class="line">
+<div class="name">Julie:</div> I guess the point is when we're talking about Haskell, the only category we care about is Hask, and the objects there are types and the morphisms are functions. Which means when we talk about Hask, we're already talking about set theory, I think. That and abstract algebra, when we talk about algebraic structures.
+</div>
+
+<div class="line">
+<div class="name">Chris:</div> Yes.
+</div>
+
+<div class="line">
+<div class="name">Julie:</div> Oh, hmm, and also morphisms in category theory are monomorphic, I think, not polymorphic, whereas for Haskell, we like polymorphic functions.
+</div>
+
+<div class="line">
+<div class="name">Chris:</div> I think what categories bring to the table is *design*, this notion of things being natural, conceptually small?
+</div>
+
+<div class="line">
+<div class="name">Julie:</div> Yes. Design. Like typeclasses themselves. I think those are conceptually category theoretic. Like we can see a pattern repeated across a bunch of apparently unrelated things, so we make a typeclass, and it is in some way like taking a bunch of not-obviously-related things and finding the thing they share in common and calling it a category.
+
+And also monad. That idea did come from category theory, not set theory -- although, again, category theory generalizes set theory so they are not totally distinct. Anyway, I don't think the Haskell version maps perfectly to the CT version, but the idea is there.
+</div>
+
+</div>
