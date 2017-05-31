@@ -882,8 +882,8 @@ $close-text-shadow:           0 1px 0 $white !default;
 // Code
 
 $code-font-size:              15px !default;
-$code-padding-x:              .4rem !default;
-$code-padding-y:              .1rem !default;
+$code-padding-x:              0 !default;
+$code-padding-y:              0 !default;
 $code-color:                  $brand-primary !default;
 $code-bg:                     transparent !default;
 
